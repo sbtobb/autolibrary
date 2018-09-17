@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyouguang.autolibrary.dao.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="com.cyouguang.autolibrary.entity.UserInfo">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    <id column="user_info_id" jdbcType="INTEGER" property="user_info_id" />
+    <result column="user_id" jdbcType="INTEGER" property="user_id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="integral" jdbcType="DECIMAL" property="integral" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="register_time" />
+    <result column="modified_time" jdbcType="TIMESTAMP" property="modified_time" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    user_info_id, user_id, `name`, gender, email, avatar, integral, register_time, modified_time
+  </sql>
+  <select id="selectByExample" parameterType="com.cyouguang.autolibrary.entity.UserInfoExample" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from `user_info`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from `user_info`
+    where user_info_id = #{user_info_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    delete from `user_info`
+    where user_info_id = #{user_info_id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.cyouguang.autolibrary.entity.UserInfoExample">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    delete from `user_info`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.UserInfo">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    insert into `user_info` (user_info_id, user_id, `name`, 
+      gender, email, avatar, 
+      integral, register_time, modified_time
+      )
+    values (#{user_info_id,jdbcType=INTEGER}, #{user_id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=CHAR}, #{email,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}, 
+      #{integral,jdbcType=DECIMAL}, #{register_time,jdbcType=TIMESTAMP}, #{modified_time,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.UserInfo">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    insert into `user_info`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="user_info_id != null">
+        user_info_id,
+      </if>
+      <if test="user_id != null">
+        user_id,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="avatar != null">
+        avatar,
+      </if>
+      <if test="integral != null">
+        integral,
+      </if>
+      <if test="register_time != null">
+        register_time,
+      </if>
+      <if test="modified_time != null">
+        modified_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="user_info_id != null">
+        #{user_info_id,jdbcType=INTEGER},
+      </if>
+      <if test="user_id != null">
+        #{user_id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=CHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="avatar != null">
+        #{avatar,jdbcType=VARCHAR},
+      </if>
+      <if test="integral != null">
+        #{integral,jdbcType=DECIMAL},
+      </if>
+      <if test="register_time != null">
+        #{register_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified_time != null">
+        #{modified_time,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.cyouguang.autolibrary.entity.UserInfoExample" resultType="java.lang.Long">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    select count(*) from `user_info`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `user_info`
+    <set>
+      <if test="record.user_info_id != null">
+        user_info_id = #{record.user_info_id,jdbcType=INTEGER},
+      </if>
+      <if test="record.user_id != null">
+        user_id = #{record.user_id,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null">
+        `name` = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gender != null">
+        gender = #{record.gender,jdbcType=CHAR},
+      </if>
+      <if test="record.email != null">
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avatar != null">
+        avatar = #{record.avatar,jdbcType=VARCHAR},
+      </if>
+      <if test="record.integral != null">
+        integral = #{record.integral,jdbcType=DECIMAL},
+      </if>
+      <if test="record.register_time != null">
+        register_time = #{record.register_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.modified_time != null">
+        modified_time = #{record.modified_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `user_info`
+    set user_info_id = #{record.user_info_id,jdbcType=INTEGER},
+      user_id = #{record.user_id,jdbcType=INTEGER},
+      `name` = #{record.name,jdbcType=VARCHAR},
+      gender = #{record.gender,jdbcType=CHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      avatar = #{record.avatar,jdbcType=VARCHAR},
+      integral = #{record.integral,jdbcType=DECIMAL},
+      register_time = #{record.register_time,jdbcType=TIMESTAMP},
+      modified_time = #{record.modified_time,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyouguang.autolibrary.entity.UserInfo">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `user_info`
+    <set>
+      <if test="user_id != null">
+        user_id = #{user_id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=CHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="avatar != null">
+        avatar = #{avatar,jdbcType=VARCHAR},
+      </if>
+      <if test="integral != null">
+        integral = #{integral,jdbcType=DECIMAL},
+      </if>
+      <if test="register_time != null">
+        register_time = #{register_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified_time != null">
+        modified_time = #{modified_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where user_info_id = #{user_info_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cyouguang.autolibrary.entity.UserInfo">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `user_info`
+    set user_id = #{user_id,jdbcType=INTEGER},
+      `name` = #{name,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      email = #{email,jdbcType=VARCHAR},
+      avatar = #{avatar,jdbcType=VARCHAR},
+      integral = #{integral,jdbcType=DECIMAL},
+      register_time = #{register_time,jdbcType=TIMESTAMP},
+      modified_time = #{modified_time,jdbcType=TIMESTAMP}
+    where user_info_id = #{user_info_id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyouguang.autolibrary.dao.DeviceMasterMapper">
+  <resultMap id="BaseResultMap" type="com.cyouguang.autolibrary.entity.DeviceMaster">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    <id column="device_id" jdbcType="INTEGER" property="device_id" />
+    <result column="place" jdbcType="VARCHAR" property="place" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    device_id, place, `status`
+  </sql>
+  <select id="selectByExample" parameterType="com.cyouguang.autolibrary.entity.DeviceMasterExample" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from `device_master`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from `device_master`
+    where device_id = #{device_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    delete from `device_master`
+    where device_id = #{device_id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.cyouguang.autolibrary.entity.DeviceMasterExample">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    delete from `device_master`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.DeviceMaster">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    insert into `device_master` (device_id, place, `status`
+      )
+    values (#{device_id,jdbcType=INTEGER}, #{place,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.DeviceMaster">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    insert into `device_master`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="device_id != null">
+        device_id,
+      </if>
+      <if test="place != null">
+        place,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="device_id != null">
+        #{device_id,jdbcType=INTEGER},
+      </if>
+      <if test="place != null">
+        #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.cyouguang.autolibrary.entity.DeviceMasterExample" resultType="java.lang.Long">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    select count(*) from `device_master`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `device_master`
+    <set>
+      <if test="record.device_id != null">
+        device_id = #{record.device_id,jdbcType=INTEGER},
+      </if>
+      <if test="record.place != null">
+        place = #{record.place,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=TINYINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `device_master`
+    set device_id = #{record.device_id,jdbcType=INTEGER},
+      place = #{record.place,jdbcType=VARCHAR},
+      `status` = #{record.status,jdbcType=TINYINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyouguang.autolibrary.entity.DeviceMaster">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `device_master`
+    <set>
+      <if test="place != null">
+        place = #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+    </set>
+    where device_id = #{device_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cyouguang.autolibrary.entity.DeviceMaster">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+    -->
+    update `device_master`
+    set place = #{place,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT}
+    where device_id = #{device_id,jdbcType=INTEGER}
+  </update>
+</mapper>
