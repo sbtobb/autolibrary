@@ -11,19 +11,19 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class OrderProductExample {
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     protected String orderByClause;
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     protected boolean distinct;
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     protected List<Criteria> oredCriteria;
 
@@ -33,7 +33,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public OrderProductExample() {
         oredCriteria = new ArrayList<Criteria>();
@@ -41,7 +41,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public void setOrderByClause(String orderByClause) {
         this.orderByClause = orderByClause;
@@ -49,7 +49,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public String getOrderByClause() {
         return orderByClause;
@@ -57,7 +57,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public void setDistinct(boolean distinct) {
         this.distinct = distinct;
@@ -65,7 +65,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public boolean isDistinct() {
         return distinct;
@@ -73,7 +73,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public List<Criteria> getOredCriteria() {
         return oredCriteria;
@@ -81,7 +81,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public void or(Criteria criteria) {
         oredCriteria.add(criteria);
@@ -89,7 +89,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public Criteria or() {
         Criteria criteria = createCriteriaInternal();
@@ -99,7 +99,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public Criteria createCriteria() {
         Criteria criteria = createCriteriaInternal();
@@ -111,7 +111,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     protected Criteria createCriteriaInternal() {
         Criteria criteria = new Criteria();
@@ -120,7 +120,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public void clear() {
         oredCriteria.clear();
@@ -153,7 +153,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
@@ -316,6 +316,66 @@ public class OrderProductExample {
             return (Criteria) this;
         }
 
+        public Criteria andBook_info_idIsNull() {
+            addCriterion("book_info_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idIsNotNull() {
+            addCriterion("book_info_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idEqualTo(Integer value) {
+            addCriterion("book_info_id =", value, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idNotEqualTo(Integer value) {
+            addCriterion("book_info_id <>", value, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idGreaterThan(Integer value) {
+            addCriterion("book_info_id >", value, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idGreaterThanOrEqualTo(Integer value) {
+            addCriterion("book_info_id >=", value, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idLessThan(Integer value) {
+            addCriterion("book_info_id <", value, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idLessThanOrEqualTo(Integer value) {
+            addCriterion("book_info_id <=", value, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idIn(List<Integer> values) {
+            addCriterion("book_info_id in", values, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idNotIn(List<Integer> values) {
+            addCriterion("book_info_id not in", values, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idBetween(Integer value1, Integer value2) {
+            addCriterion("book_info_id between", value1, value2, "book_info_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andBook_info_idNotBetween(Integer value1, Integer value2) {
+            addCriterion("book_info_id not between", value1, value2, "book_info_id");
+            return (Criteria) this;
+        }
+
         public Criteria andTagIsNull() {
             addCriterion("tag is null");
             return (Criteria) this;
@@ -456,6 +516,76 @@ public class OrderProductExample {
             return (Criteria) this;
         }
 
+        public Criteria andPicIsNull() {
+            addCriterion("pic is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicIsNotNull() {
+            addCriterion("pic is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicEqualTo(String value) {
+            addCriterion("pic =", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicNotEqualTo(String value) {
+            addCriterion("pic <>", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicGreaterThan(String value) {
+            addCriterion("pic >", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicGreaterThanOrEqualTo(String value) {
+            addCriterion("pic >=", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicLessThan(String value) {
+            addCriterion("pic <", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicLessThanOrEqualTo(String value) {
+            addCriterion("pic <=", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicLike(String value) {
+            addCriterion("pic like", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicNotLike(String value) {
+            addCriterion("pic not like", value, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicIn(List<String> values) {
+            addCriterion("pic in", values, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicNotIn(List<String> values) {
+            addCriterion("pic not in", values, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBetween(String value1, String value2) {
+            addCriterion("pic between", value1, value2, "pic");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicNotBetween(String value1, String value2) {
+            addCriterion("pic not between", value1, value2, "pic");
+            return (Criteria) this;
+        }
+
         public Criteria andPriceIsNull() {
             addCriterion("price is null");
             return (Criteria) this;
@@ -525,11 +655,16 @@ public class OrderProductExample {
             addCriterion("upper(title) like", value.toUpperCase(), "title");
             return (Criteria) this;
         }
+
+        public Criteria andPicLikeInsensitive(String value) {
+            addCriterion("upper(pic) like", value.toUpperCase(), "pic");
+            return (Criteria) this;
+        }
     }
 
     /**
      *
-     * @mbg.generated do_not_delete_during_merge Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated do_not_delete_during_merge Tue Sep 18 21:37:01 CST 2018
      */
     public static class Criteria extends GeneratedCriteria {
 
@@ -540,7 +675,7 @@ public class OrderProductExample {
 
     /**
      *
-     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
+     * @mbg.generated Tue Sep 18 21:37:01 CST 2018
      */
     public static class Criterion {
         private String condition;
