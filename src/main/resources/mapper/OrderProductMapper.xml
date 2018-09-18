@@ -3,17 +3,19 @@
 <mapper namespace="com.cyouguang.autolibrary.dao.OrderProductMapper">
   <resultMap id="BaseResultMap" type="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     <id column="product_id" jdbcType="INTEGER" property="product_id" />
     <result column="order_id" jdbcType="INTEGER" property="order_id" />
+    <result column="book_info_id" jdbcType="INTEGER" property="book_info_id" />
     <result column="tag" jdbcType="VARCHAR" property="tag" />
     <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
     <result column="price" jdbcType="DECIMAL" property="price" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -45,7 +47,7 @@
   </sql>
   <sql id="Update_By_Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -77,13 +79,13 @@
   </sql>
   <sql id="Base_Column_List">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
-    product_id, order_id, tag, title, price
+    product_id, order_id, book_info_id, tag, title, pic, price
   </sql>
   <select id="selectByExample" parameterType="com.cyouguang.autolibrary.entity.OrderProductExample" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     select
     <if test="distinct">
@@ -108,7 +110,7 @@
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     select 
     <include refid="Base_Column_List" />
@@ -117,14 +119,14 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     delete from `order_product`
     where product_id = #{product_id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.cyouguang.autolibrary.entity.OrderProductExample">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     delete from `order_product`
     <if test="_parameter != null">
@@ -133,16 +135,18 @@
   </delete>
   <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
-    insert into `order_product` (product_id, order_id, tag, 
-      title, price)
-    values (#{product_id,jdbcType=INTEGER}, #{order_id,jdbcType=INTEGER}, #{tag,jdbcType=VARCHAR}, 
-      #{title,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL})
+    insert into `order_product` (product_id, order_id, book_info_id, 
+      tag, title, pic, price
+      )
+    values (#{product_id,jdbcType=INTEGER}, #{order_id,jdbcType=INTEGER}, #{book_info_id,jdbcType=INTEGER}, 
+      #{tag,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     insert into `order_product`
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -152,11 +156,17 @@
       <if test="order_id != null">
         order_id,
       </if>
+      <if test="book_info_id != null">
+        book_info_id,
+      </if>
       <if test="tag != null">
         tag,
       </if>
       <if test="title != null">
         title,
+      </if>
+      <if test="pic != null">
+        pic,
       </if>
       <if test="price != null">
         price,
@@ -169,11 +179,17 @@
       <if test="order_id != null">
         #{order_id,jdbcType=INTEGER},
       </if>
+      <if test="book_info_id != null">
+        #{book_info_id,jdbcType=INTEGER},
+      </if>
       <if test="tag != null">
         #{tag,jdbcType=VARCHAR},
       </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
         #{price,jdbcType=DECIMAL},
@@ -182,7 +198,7 @@
   </insert>
   <select id="countByExample" parameterType="com.cyouguang.autolibrary.entity.OrderProductExample" resultType="java.lang.Long">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     select count(*) from `order_product`
     <if test="_parameter != null">
@@ -191,7 +207,7 @@
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     <set>
@@ -201,11 +217,17 @@
       <if test="record.order_id != null">
         order_id = #{record.order_id,jdbcType=INTEGER},
       </if>
+      <if test="record.book_info_id != null">
+        book_info_id = #{record.book_info_id,jdbcType=INTEGER},
+      </if>
       <if test="record.tag != null">
         tag = #{record.tag,jdbcType=VARCHAR},
       </if>
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pic != null">
+        pic = #{record.pic,jdbcType=VARCHAR},
       </if>
       <if test="record.price != null">
         price = #{record.price,jdbcType=DECIMAL},
@@ -217,13 +239,15 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     set product_id = #{record.product_id,jdbcType=INTEGER},
       order_id = #{record.order_id,jdbcType=INTEGER},
+      book_info_id = #{record.book_info_id,jdbcType=INTEGER},
       tag = #{record.tag,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
+      pic = #{record.pic,jdbcType=VARCHAR},
       price = #{record.price,jdbcType=DECIMAL}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -231,18 +255,24 @@
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     <set>
       <if test="order_id != null">
         order_id = #{order_id,jdbcType=INTEGER},
       </if>
+      <if test="book_info_id != null">
+        book_info_id = #{book_info_id,jdbcType=INTEGER},
+      </if>
       <if test="tag != null">
         tag = #{tag,jdbcType=VARCHAR},
       </if>
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
         price = #{price,jdbcType=DECIMAL},
@@ -252,12 +282,14 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     set order_id = #{order_id,jdbcType=INTEGER},
+      book_info_id = #{book_info_id,jdbcType=INTEGER},
       tag = #{tag,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
       price = #{price,jdbcType=DECIMAL}
     where product_id = #{product_id,jdbcType=INTEGER}
   </update>

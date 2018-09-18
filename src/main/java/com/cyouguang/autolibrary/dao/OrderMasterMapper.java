@@ -10,8 +10,10 @@ import javax.persistence.Table;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.stereotype.Service;
 
 @Mapper
+@Service
 public interface OrderMasterMapper {
     /**
      *
