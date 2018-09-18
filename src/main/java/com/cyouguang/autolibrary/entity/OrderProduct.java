@@ -20,7 +20,7 @@ public class OrderProduct implements Serializable {
      *   订单商品表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer product_id;
 
@@ -28,7 +28,7 @@ public class OrderProduct implements Serializable {
      *   书籍信息表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer order_id;
 
@@ -36,7 +36,7 @@ public class OrderProduct implements Serializable {
      *   图书电子标签
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String tag;
 
@@ -44,7 +44,7 @@ public class OrderProduct implements Serializable {
      *   书籍标题
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String title;
 
@@ -52,13 +52,13 @@ public class OrderProduct implements Serializable {
      *   价格
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Long price;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -67,7 +67,7 @@ public class OrderProduct implements Serializable {
      *
      * @return the value of order_product.product_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getProduct_id() {
         return product_id;
@@ -75,7 +75,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderProduct withProduct_id(Integer product_id) {
         this.setProduct_id(product_id);
@@ -87,7 +87,7 @@ public class OrderProduct implements Serializable {
      *
      * @param product_id the value for order_product.product_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setProduct_id(Integer product_id) {
         this.product_id = product_id;
@@ -98,7 +98,7 @@ public class OrderProduct implements Serializable {
      *
      * @return the value of order_product.order_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getOrder_id() {
         return order_id;
@@ -106,7 +106,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderProduct withOrder_id(Integer order_id) {
         this.setOrder_id(order_id);
@@ -118,7 +118,7 @@ public class OrderProduct implements Serializable {
      *
      * @param order_id the value for order_product.order_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setOrder_id(Integer order_id) {
         this.order_id = order_id;
@@ -129,7 +129,7 @@ public class OrderProduct implements Serializable {
      *
      * @return the value of order_product.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTag() {
         return tag;
@@ -137,7 +137,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderProduct withTag(String tag) {
         this.setTag(tag);
@@ -149,7 +149,7 @@ public class OrderProduct implements Serializable {
      *
      * @param tag the value for order_product.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTag(String tag) {
         this.tag = tag;
@@ -160,7 +160,7 @@ public class OrderProduct implements Serializable {
      *
      * @return the value of order_product.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTitle() {
         return title;
@@ -168,7 +168,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderProduct withTitle(String title) {
         this.setTitle(title);
@@ -180,7 +180,7 @@ public class OrderProduct implements Serializable {
      *
      * @param title the value for order_product.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTitle(String title) {
         this.title = title;
@@ -191,7 +191,7 @@ public class OrderProduct implements Serializable {
      *
      * @return the value of order_product.price
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Long getPrice() {
         return price;
@@ -199,7 +199,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderProduct withPrice(Long price) {
         this.setPrice(price);
@@ -211,7 +211,7 @@ public class OrderProduct implements Serializable {
      *
      * @param price the value for order_product.price
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPrice(Long price) {
         this.price = price;
@@ -219,7 +219,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -238,7 +238,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -261,7 +261,7 @@ public class OrderProduct implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

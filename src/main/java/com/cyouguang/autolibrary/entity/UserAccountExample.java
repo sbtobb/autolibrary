@@ -12,25 +12,29 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class UserAccountExample {
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     protected String orderByClause;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     protected boolean distinct;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     protected List<Criteria> oredCriteria;
 
+    private Integer limit;
+
+    private Integer offset;
+
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserAccountExample() {
         oredCriteria = new ArrayList<Criteria>();
@@ -38,7 +42,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setOrderByClause(String orderByClause) {
         this.orderByClause = orderByClause;
@@ -46,7 +50,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getOrderByClause() {
         return orderByClause;
@@ -54,7 +58,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setDistinct(boolean distinct) {
         this.distinct = distinct;
@@ -62,7 +66,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public boolean isDistinct() {
         return distinct;
@@ -70,7 +74,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public List<Criteria> getOredCriteria() {
         return oredCriteria;
@@ -78,7 +82,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void or(Criteria criteria) {
         oredCriteria.add(criteria);
@@ -86,7 +90,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Criteria or() {
         Criteria criteria = createCriteriaInternal();
@@ -96,7 +100,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Criteria createCriteria() {
         Criteria criteria = createCriteriaInternal();
@@ -108,7 +112,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     protected Criteria createCriteriaInternal() {
         Criteria criteria = new Criteria();
@@ -117,7 +121,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void clear() {
         oredCriteria.clear();
@@ -125,9 +129,32 @@ public class UserAccountExample {
         distinct = false;
     }
 
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setOffset(Integer offset) {
+        this.offset = offset;
+    }
+
+    public Integer getOffset() {
+        return offset;
+    }
+
+    public void setPageInfo(Integer currentPage, Integer pageSize) {
+        if(pageSize<1) throw new IllegalArgumentException("页大小不能小于1！");
+        this.limit=pageSize;
+        if(currentPage<1) throw new IllegalArgumentException("页数不能小于1！");
+        this.offset=(currentPage-1)*pageSize;
+    }
+
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
@@ -503,7 +530,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated do_not_delete_during_merge Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated do_not_delete_during_merge Tue Sep 18 08:11:50 CST 2018
      */
     public static class Criteria extends GeneratedCriteria {
 
@@ -514,7 +541,7 @@ public class UserAccountExample {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public static class Criterion {
         private String condition;

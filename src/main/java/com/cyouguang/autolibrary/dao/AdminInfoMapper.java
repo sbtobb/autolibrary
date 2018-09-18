@@ -15,67 +15,67 @@ import org.hibernate.validator.constraints.NotEmpty;
 public interface AdminInfoMapper {
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     long countByExample(AdminInfoExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int deleteByExample(AdminInfoExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int deleteByPrimaryKey(Integer admin_info_id);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int insert(AdminInfo record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int insertSelective(AdminInfo record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     List<AdminInfo> selectByExample(AdminInfoExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     AdminInfo selectByPrimaryKey(Integer admin_info_id);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByExampleSelective(@Param("record") AdminInfo record, @Param("example") AdminInfoExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByExample(@Param("record") AdminInfo record, @Param("example") AdminInfoExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByPrimaryKeySelective(AdminInfo record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByPrimaryKey(AdminInfo record);
 }

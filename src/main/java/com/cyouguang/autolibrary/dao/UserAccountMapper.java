@@ -15,67 +15,67 @@ import org.hibernate.validator.constraints.NotEmpty;
 public interface UserAccountMapper {
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     long countByExample(UserAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int deleteByExample(UserAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int deleteByPrimaryKey(Integer user_id);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int insert(UserAccount record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int insertSelective(UserAccount record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     List<UserAccount> selectByExample(UserAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     UserAccount selectByPrimaryKey(Integer user_id);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByExampleSelective(@Param("record") UserAccount record, @Param("example") UserAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByExample(@Param("record") UserAccount record, @Param("example") UserAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByPrimaryKeySelective(UserAccount record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByPrimaryKey(UserAccount record);
 }

@@ -20,7 +20,7 @@ public class BookBorrowLog implements Serializable {
      *   书籍借还表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer borrow_id;
 
@@ -28,7 +28,7 @@ public class BookBorrowLog implements Serializable {
      *   书籍信息主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer book_info_id;
 
@@ -36,7 +36,7 @@ public class BookBorrowLog implements Serializable {
      *   图书电子标签
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String tag;
 
@@ -44,7 +44,7 @@ public class BookBorrowLog implements Serializable {
      *   书籍标题
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String title;
 
@@ -52,7 +52,7 @@ public class BookBorrowLog implements Serializable {
      *   用户账号表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer user_id;
 
@@ -60,13 +60,13 @@ public class BookBorrowLog implements Serializable {
      *   0 借书 1 还书
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Byte status;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -75,7 +75,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @return the value of book_borrow_log.borrow_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getBorrow_id() {
         return borrow_id;
@@ -83,7 +83,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookBorrowLog withBorrow_id(Integer borrow_id) {
         this.setBorrow_id(borrow_id);
@@ -95,7 +95,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @param borrow_id the value for book_borrow_log.borrow_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBorrow_id(Integer borrow_id) {
         this.borrow_id = borrow_id;
@@ -106,7 +106,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @return the value of book_borrow_log.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getBook_info_id() {
         return book_info_id;
@@ -114,7 +114,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookBorrowLog withBook_info_id(Integer book_info_id) {
         this.setBook_info_id(book_info_id);
@@ -126,7 +126,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @param book_info_id the value for book_borrow_log.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBook_info_id(Integer book_info_id) {
         this.book_info_id = book_info_id;
@@ -137,7 +137,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @return the value of book_borrow_log.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTag() {
         return tag;
@@ -145,7 +145,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookBorrowLog withTag(String tag) {
         this.setTag(tag);
@@ -157,7 +157,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @param tag the value for book_borrow_log.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTag(String tag) {
         this.tag = tag;
@@ -168,7 +168,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @return the value of book_borrow_log.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTitle() {
         return title;
@@ -176,7 +176,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookBorrowLog withTitle(String title) {
         this.setTitle(title);
@@ -188,7 +188,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @param title the value for book_borrow_log.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTitle(String title) {
         this.title = title;
@@ -199,7 +199,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @return the value of book_borrow_log.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getUser_id() {
         return user_id;
@@ -207,7 +207,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookBorrowLog withUser_id(Integer user_id) {
         this.setUser_id(user_id);
@@ -219,7 +219,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @param user_id the value for book_borrow_log.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
@@ -230,7 +230,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @return the value of book_borrow_log.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Byte getStatus() {
         return status;
@@ -238,7 +238,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookBorrowLog withStatus(Byte status) {
         this.setStatus(status);
@@ -250,7 +250,7 @@ public class BookBorrowLog implements Serializable {
      *
      * @param status the value for book_borrow_log.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setStatus(Byte status) {
         this.status = status;
@@ -258,7 +258,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -278,7 +278,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -302,7 +302,7 @@ public class BookBorrowLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

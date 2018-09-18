@@ -15,67 +15,67 @@ import org.hibernate.validator.constraints.NotEmpty;
 public interface AdminAccountMapper {
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     long countByExample(AdminAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int deleteByExample(AdminAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int deleteByPrimaryKey(Integer admin_id);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int insert(AdminAccount record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int insertSelective(AdminAccount record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     List<AdminAccount> selectByExample(AdminAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     AdminAccount selectByPrimaryKey(Integer admin_id);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByExampleSelective(@Param("record") AdminAccount record, @Param("example") AdminAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByExample(@Param("record") AdminAccount record, @Param("example") AdminAccountExample example);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByPrimaryKeySelective(AdminAccount record);
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     int updateByPrimaryKey(AdminAccount record);
 }

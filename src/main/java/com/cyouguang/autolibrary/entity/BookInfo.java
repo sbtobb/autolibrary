@@ -21,7 +21,7 @@ public class BookInfo implements Serializable {
      *   书籍信息表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer book_info_id;
 
@@ -29,7 +29,7 @@ public class BookInfo implements Serializable {
      *   书籍标题
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String title;
 
@@ -37,7 +37,7 @@ public class BookInfo implements Serializable {
      *   副标题
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String subtitle;
 
@@ -45,7 +45,7 @@ public class BookInfo implements Serializable {
      *   图片地址
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String pic;
 
@@ -53,7 +53,7 @@ public class BookInfo implements Serializable {
      *   作者名字
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String author;
 
@@ -61,7 +61,7 @@ public class BookInfo implements Serializable {
      *   简介
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String summary;
 
@@ -69,7 +69,7 @@ public class BookInfo implements Serializable {
      *   出版社
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String publisher;
 
@@ -77,7 +77,7 @@ public class BookInfo implements Serializable {
      *   出版地址
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String pubplace;
 
@@ -85,7 +85,7 @@ public class BookInfo implements Serializable {
      *   出版时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date pubdate;
 
@@ -93,7 +93,7 @@ public class BookInfo implements Serializable {
      *   页数
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer page;
 
@@ -101,7 +101,7 @@ public class BookInfo implements Serializable {
      *   价格
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Long price;
 
@@ -109,7 +109,7 @@ public class BookInfo implements Serializable {
      *   包装格式
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String binding;
 
@@ -117,7 +117,7 @@ public class BookInfo implements Serializable {
      *   isbn
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String isbn;
 
@@ -125,7 +125,7 @@ public class BookInfo implements Serializable {
      *   isbn10
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String isbn10;
 
@@ -133,7 +133,7 @@ public class BookInfo implements Serializable {
      *   关键词
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String keyword;
 
@@ -141,7 +141,7 @@ public class BookInfo implements Serializable {
      *   版本
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String edition;
 
@@ -149,7 +149,7 @@ public class BookInfo implements Serializable {
      *   印次
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String impression;
 
@@ -157,7 +157,7 @@ public class BookInfo implements Serializable {
      *   语言
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String language;
 
@@ -165,7 +165,7 @@ public class BookInfo implements Serializable {
      *   装订格式
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String format;
 
@@ -173,13 +173,13 @@ public class BookInfo implements Serializable {
      *   中图法分类
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String bookclass;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -188,7 +188,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getBook_info_id() {
         return book_info_id;
@@ -196,7 +196,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withBook_info_id(Integer book_info_id) {
         this.setBook_info_id(book_info_id);
@@ -208,7 +208,7 @@ public class BookInfo implements Serializable {
      *
      * @param book_info_id the value for book_info.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBook_info_id(Integer book_info_id) {
         this.book_info_id = book_info_id;
@@ -219,7 +219,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTitle() {
         return title;
@@ -227,7 +227,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withTitle(String title) {
         this.setTitle(title);
@@ -239,7 +239,7 @@ public class BookInfo implements Serializable {
      *
      * @param title the value for book_info.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTitle(String title) {
         this.title = title;
@@ -250,7 +250,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.subtitle
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getSubtitle() {
         return subtitle;
@@ -258,7 +258,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withSubtitle(String subtitle) {
         this.setSubtitle(subtitle);
@@ -270,7 +270,7 @@ public class BookInfo implements Serializable {
      *
      * @param subtitle the value for book_info.subtitle
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setSubtitle(String subtitle) {
         this.subtitle = subtitle;
@@ -281,7 +281,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.pic
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getPic() {
         return pic;
@@ -289,7 +289,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withPic(String pic) {
         this.setPic(pic);
@@ -301,7 +301,7 @@ public class BookInfo implements Serializable {
      *
      * @param pic the value for book_info.pic
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPic(String pic) {
         this.pic = pic;
@@ -312,7 +312,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.author
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getAuthor() {
         return author;
@@ -320,7 +320,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withAuthor(String author) {
         this.setAuthor(author);
@@ -332,7 +332,7 @@ public class BookInfo implements Serializable {
      *
      * @param author the value for book_info.author
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setAuthor(String author) {
         this.author = author;
@@ -343,7 +343,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.summary
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getSummary() {
         return summary;
@@ -351,7 +351,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withSummary(String summary) {
         this.setSummary(summary);
@@ -363,7 +363,7 @@ public class BookInfo implements Serializable {
      *
      * @param summary the value for book_info.summary
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setSummary(String summary) {
         this.summary = summary;
@@ -374,7 +374,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.publisher
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getPublisher() {
         return publisher;
@@ -382,7 +382,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withPublisher(String publisher) {
         this.setPublisher(publisher);
@@ -394,7 +394,7 @@ public class BookInfo implements Serializable {
      *
      * @param publisher the value for book_info.publisher
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPublisher(String publisher) {
         this.publisher = publisher;
@@ -405,7 +405,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.pubplace
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getPubplace() {
         return pubplace;
@@ -413,7 +413,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withPubplace(String pubplace) {
         this.setPubplace(pubplace);
@@ -425,7 +425,7 @@ public class BookInfo implements Serializable {
      *
      * @param pubplace the value for book_info.pubplace
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPubplace(String pubplace) {
         this.pubplace = pubplace;
@@ -436,7 +436,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.pubdate
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getPubdate() {
         return pubdate;
@@ -444,7 +444,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withPubdate(Date pubdate) {
         this.setPubdate(pubdate);
@@ -456,7 +456,7 @@ public class BookInfo implements Serializable {
      *
      * @param pubdate the value for book_info.pubdate
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPubdate(Date pubdate) {
         this.pubdate = pubdate;
@@ -467,7 +467,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.page
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getPage() {
         return page;
@@ -475,7 +475,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withPage(Integer page) {
         this.setPage(page);
@@ -487,7 +487,7 @@ public class BookInfo implements Serializable {
      *
      * @param page the value for book_info.page
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPage(Integer page) {
         this.page = page;
@@ -498,7 +498,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.price
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Long getPrice() {
         return price;
@@ -506,7 +506,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withPrice(Long price) {
         this.setPrice(price);
@@ -518,7 +518,7 @@ public class BookInfo implements Serializable {
      *
      * @param price the value for book_info.price
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPrice(Long price) {
         this.price = price;
@@ -529,7 +529,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.binding
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getBinding() {
         return binding;
@@ -537,7 +537,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withBinding(String binding) {
         this.setBinding(binding);
@@ -549,7 +549,7 @@ public class BookInfo implements Serializable {
      *
      * @param binding the value for book_info.binding
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBinding(String binding) {
         this.binding = binding;
@@ -560,7 +560,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.isbn
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getIsbn() {
         return isbn;
@@ -568,7 +568,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withIsbn(String isbn) {
         this.setIsbn(isbn);
@@ -580,7 +580,7 @@ public class BookInfo implements Serializable {
      *
      * @param isbn the value for book_info.isbn
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setIsbn(String isbn) {
         this.isbn = isbn;
@@ -591,7 +591,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.isbn10
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getIsbn10() {
         return isbn10;
@@ -599,7 +599,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withIsbn10(String isbn10) {
         this.setIsbn10(isbn10);
@@ -611,7 +611,7 @@ public class BookInfo implements Serializable {
      *
      * @param isbn10 the value for book_info.isbn10
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setIsbn10(String isbn10) {
         this.isbn10 = isbn10;
@@ -622,7 +622,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.keyword
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getKeyword() {
         return keyword;
@@ -630,7 +630,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withKeyword(String keyword) {
         this.setKeyword(keyword);
@@ -642,7 +642,7 @@ public class BookInfo implements Serializable {
      *
      * @param keyword the value for book_info.keyword
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setKeyword(String keyword) {
         this.keyword = keyword;
@@ -653,7 +653,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.edition
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getEdition() {
         return edition;
@@ -661,7 +661,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withEdition(String edition) {
         this.setEdition(edition);
@@ -673,7 +673,7 @@ public class BookInfo implements Serializable {
      *
      * @param edition the value for book_info.edition
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setEdition(String edition) {
         this.edition = edition;
@@ -684,7 +684,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.impression
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getImpression() {
         return impression;
@@ -692,7 +692,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withImpression(String impression) {
         this.setImpression(impression);
@@ -704,7 +704,7 @@ public class BookInfo implements Serializable {
      *
      * @param impression the value for book_info.impression
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setImpression(String impression) {
         this.impression = impression;
@@ -715,7 +715,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.language
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getLanguage() {
         return language;
@@ -723,7 +723,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withLanguage(String language) {
         this.setLanguage(language);
@@ -735,7 +735,7 @@ public class BookInfo implements Serializable {
      *
      * @param language the value for book_info.language
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setLanguage(String language) {
         this.language = language;
@@ -746,7 +746,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.format
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getFormat() {
         return format;
@@ -754,7 +754,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withFormat(String format) {
         this.setFormat(format);
@@ -766,7 +766,7 @@ public class BookInfo implements Serializable {
      *
      * @param format the value for book_info.format
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setFormat(String format) {
         this.format = format;
@@ -777,7 +777,7 @@ public class BookInfo implements Serializable {
      *
      * @return the value of book_info.bookclass
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getBookclass() {
         return bookclass;
@@ -785,7 +785,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookInfo withBookclass(String bookclass) {
         this.setBookclass(bookclass);
@@ -797,7 +797,7 @@ public class BookInfo implements Serializable {
      *
      * @param bookclass the value for book_info.bookclass
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBookclass(String bookclass) {
         this.bookclass = bookclass;
@@ -805,7 +805,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -839,7 +839,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -877,7 +877,7 @@ public class BookInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

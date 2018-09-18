@@ -21,7 +21,7 @@ public class OrderMaster implements Serializable {
      *   书籍信息表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer order_id;
 
@@ -29,7 +29,7 @@ public class OrderMaster implements Serializable {
      *   设备主表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer device_id;
 
@@ -37,7 +37,7 @@ public class OrderMaster implements Serializable {
      *   用户账号表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer user_id;
 
@@ -45,7 +45,7 @@ public class OrderMaster implements Serializable {
      *   总价
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Long total_price;
 
@@ -53,7 +53,7 @@ public class OrderMaster implements Serializable {
      *   -1 取消支付 0 未支付 1 已支付
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Byte status;
 
@@ -61,7 +61,7 @@ public class OrderMaster implements Serializable {
      *   创建时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date create_time;
 
@@ -69,13 +69,13 @@ public class OrderMaster implements Serializable {
      *   最后修改时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date modified_time;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -84,7 +84,7 @@ public class OrderMaster implements Serializable {
      *
      * @return the value of order_master.order_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getOrder_id() {
         return order_id;
@@ -92,7 +92,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderMaster withOrder_id(Integer order_id) {
         this.setOrder_id(order_id);
@@ -104,7 +104,7 @@ public class OrderMaster implements Serializable {
      *
      * @param order_id the value for order_master.order_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setOrder_id(Integer order_id) {
         this.order_id = order_id;
@@ -115,7 +115,7 @@ public class OrderMaster implements Serializable {
      *
      * @return the value of order_master.device_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getDevice_id() {
         return device_id;
@@ -123,7 +123,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderMaster withDevice_id(Integer device_id) {
         this.setDevice_id(device_id);
@@ -135,7 +135,7 @@ public class OrderMaster implements Serializable {
      *
      * @param device_id the value for order_master.device_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setDevice_id(Integer device_id) {
         this.device_id = device_id;
@@ -146,7 +146,7 @@ public class OrderMaster implements Serializable {
      *
      * @return the value of order_master.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getUser_id() {
         return user_id;
@@ -154,7 +154,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderMaster withUser_id(Integer user_id) {
         this.setUser_id(user_id);
@@ -166,7 +166,7 @@ public class OrderMaster implements Serializable {
      *
      * @param user_id the value for order_master.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
@@ -177,7 +177,7 @@ public class OrderMaster implements Serializable {
      *
      * @return the value of order_master.total_price
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Long getTotal_price() {
         return total_price;
@@ -185,7 +185,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderMaster withTotal_price(Long total_price) {
         this.setTotal_price(total_price);
@@ -197,7 +197,7 @@ public class OrderMaster implements Serializable {
      *
      * @param total_price the value for order_master.total_price
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTotal_price(Long total_price) {
         this.total_price = total_price;
@@ -208,7 +208,7 @@ public class OrderMaster implements Serializable {
      *
      * @return the value of order_master.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Byte getStatus() {
         return status;
@@ -216,7 +216,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderMaster withStatus(Byte status) {
         this.setStatus(status);
@@ -228,7 +228,7 @@ public class OrderMaster implements Serializable {
      *
      * @param status the value for order_master.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setStatus(Byte status) {
         this.status = status;
@@ -239,7 +239,7 @@ public class OrderMaster implements Serializable {
      *
      * @return the value of order_master.create_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getCreate_time() {
         return create_time;
@@ -247,7 +247,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderMaster withCreate_time(Date create_time) {
         this.setCreate_time(create_time);
@@ -259,7 +259,7 @@ public class OrderMaster implements Serializable {
      *
      * @param create_time the value for order_master.create_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setCreate_time(Date create_time) {
         this.create_time = create_time;
@@ -270,7 +270,7 @@ public class OrderMaster implements Serializable {
      *
      * @return the value of order_master.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getModified_time() {
         return modified_time;
@@ -278,7 +278,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public OrderMaster withModified_time(Date modified_time) {
         this.setModified_time(modified_time);
@@ -290,7 +290,7 @@ public class OrderMaster implements Serializable {
      *
      * @param modified_time the value for order_master.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setModified_time(Date modified_time) {
         this.modified_time = modified_time;
@@ -298,7 +298,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -319,7 +319,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -344,7 +344,7 @@ public class OrderMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

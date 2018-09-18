@@ -21,7 +21,7 @@ public class AdminAccount implements Serializable {
      *   管理员账号表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer admin_id;
 
@@ -29,7 +29,7 @@ public class AdminAccount implements Serializable {
      *   用户登录名
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String login_name;
 
@@ -37,7 +37,7 @@ public class AdminAccount implements Serializable {
      *   md5加密的密码
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String password;
 
@@ -45,13 +45,13 @@ public class AdminAccount implements Serializable {
      *   最后修改时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date modified_time;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -60,7 +60,7 @@ public class AdminAccount implements Serializable {
      *
      * @return the value of admin_account.admin_id
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getAdmin_id() {
         return admin_id;
@@ -68,7 +68,7 @@ public class AdminAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminAccount withAdmin_id(Integer admin_id) {
         this.setAdmin_id(admin_id);
@@ -80,7 +80,7 @@ public class AdminAccount implements Serializable {
      *
      * @param admin_id the value for admin_account.admin_id
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setAdmin_id(Integer admin_id) {
         this.admin_id = admin_id;
@@ -91,7 +91,7 @@ public class AdminAccount implements Serializable {
      *
      * @return the value of admin_account.login_name
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getLogin_name() {
         return login_name;
@@ -99,7 +99,7 @@ public class AdminAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminAccount withLogin_name(String login_name) {
         this.setLogin_name(login_name);
@@ -111,7 +111,7 @@ public class AdminAccount implements Serializable {
      *
      * @param login_name the value for admin_account.login_name
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setLogin_name(String login_name) {
         this.login_name = login_name;
@@ -122,7 +122,7 @@ public class AdminAccount implements Serializable {
      *
      * @return the value of admin_account.password
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getPassword() {
         return password;
@@ -130,7 +130,7 @@ public class AdminAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminAccount withPassword(String password) {
         this.setPassword(password);
@@ -142,7 +142,7 @@ public class AdminAccount implements Serializable {
      *
      * @param password the value for admin_account.password
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPassword(String password) {
         this.password = password;
@@ -153,7 +153,7 @@ public class AdminAccount implements Serializable {
      *
      * @return the value of admin_account.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getModified_time() {
         return modified_time;
@@ -161,7 +161,7 @@ public class AdminAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminAccount withModified_time(Date modified_time) {
         this.setModified_time(modified_time);
@@ -173,7 +173,7 @@ public class AdminAccount implements Serializable {
      *
      * @param modified_time the value for admin_account.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setModified_time(Date modified_time) {
         this.modified_time = modified_time;
@@ -181,7 +181,7 @@ public class AdminAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -199,7 +199,7 @@ public class AdminAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -221,7 +221,7 @@ public class AdminAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:47 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

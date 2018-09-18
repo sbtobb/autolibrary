@@ -20,7 +20,7 @@ public class AdminInfo implements Serializable {
      *   管理员信息表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer admin_info_id;
 
@@ -28,7 +28,7 @@ public class AdminInfo implements Serializable {
      *   管理员账号表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer admin_id;
 
@@ -36,7 +36,7 @@ public class AdminInfo implements Serializable {
      *   用户真实姓名
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String name;
 
@@ -44,13 +44,13 @@ public class AdminInfo implements Serializable {
      *   用户头像
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String avatar;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -59,7 +59,7 @@ public class AdminInfo implements Serializable {
      *
      * @return the value of admin_info.admin_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getAdmin_info_id() {
         return admin_info_id;
@@ -67,7 +67,7 @@ public class AdminInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminInfo withAdmin_info_id(Integer admin_info_id) {
         this.setAdmin_info_id(admin_info_id);
@@ -79,7 +79,7 @@ public class AdminInfo implements Serializable {
      *
      * @param admin_info_id the value for admin_info.admin_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setAdmin_info_id(Integer admin_info_id) {
         this.admin_info_id = admin_info_id;
@@ -90,7 +90,7 @@ public class AdminInfo implements Serializable {
      *
      * @return the value of admin_info.admin_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getAdmin_id() {
         return admin_id;
@@ -98,7 +98,7 @@ public class AdminInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminInfo withAdmin_id(Integer admin_id) {
         this.setAdmin_id(admin_id);
@@ -110,7 +110,7 @@ public class AdminInfo implements Serializable {
      *
      * @param admin_id the value for admin_info.admin_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setAdmin_id(Integer admin_id) {
         this.admin_id = admin_id;
@@ -121,7 +121,7 @@ public class AdminInfo implements Serializable {
      *
      * @return the value of admin_info.name
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getName() {
         return name;
@@ -129,7 +129,7 @@ public class AdminInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminInfo withName(String name) {
         this.setName(name);
@@ -141,7 +141,7 @@ public class AdminInfo implements Serializable {
      *
      * @param name the value for admin_info.name
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setName(String name) {
         this.name = name;
@@ -152,7 +152,7 @@ public class AdminInfo implements Serializable {
      *
      * @return the value of admin_info.avatar
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getAvatar() {
         return avatar;
@@ -160,7 +160,7 @@ public class AdminInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminInfo withAvatar(String avatar) {
         this.setAvatar(avatar);
@@ -172,7 +172,7 @@ public class AdminInfo implements Serializable {
      *
      * @param avatar the value for admin_info.avatar
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setAvatar(String avatar) {
         this.avatar = avatar;
@@ -180,7 +180,7 @@ public class AdminInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -198,7 +198,7 @@ public class AdminInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -220,7 +220,7 @@ public class AdminInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

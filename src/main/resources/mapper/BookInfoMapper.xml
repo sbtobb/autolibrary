@@ -3,7 +3,7 @@
 <mapper namespace="com.cyouguang.autolibrary.dao.BookInfoMapper">
   <resultMap id="BaseResultMap" type="com.cyouguang.autolibrary.entity.BookInfo">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     <id column="book_info_id" jdbcType="INTEGER" property="book_info_id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
@@ -28,7 +28,7 @@
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -60,7 +60,7 @@
   </sql>
   <sql id="Update_By_Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -92,7 +92,7 @@
   </sql>
   <sql id="Base_Column_List">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     book_info_id, title, subtitle, pic, author, summary, publisher, pubplace, pubdate, 
     page, price, binding, isbn, isbn10, keyword, edition, impression, `language`, format, 
@@ -100,7 +100,7 @@
   </sql>
   <select id="selectByExample" parameterType="com.cyouguang.autolibrary.entity.BookInfoExample" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     select
     <if test="distinct">
@@ -114,10 +114,18 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     select 
     <include refid="Base_Column_List" />
@@ -126,14 +134,14 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     delete from `book_info`
     where book_info_id = #{book_info_id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.cyouguang.autolibrary.entity.BookInfoExample">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     delete from `book_info`
     <if test="_parameter != null">
@@ -142,7 +150,7 @@
   </delete>
   <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.BookInfo">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     insert into `book_info` (book_info_id, title, subtitle, 
       pic, author, summary, 
@@ -161,7 +169,7 @@
   </insert>
   <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.BookInfo">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     insert into `book_info`
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -291,7 +299,7 @@
   </insert>
   <select id="countByExample" parameterType="com.cyouguang.autolibrary.entity.BookInfoExample" resultType="java.lang.Long">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     select count(*) from `book_info`
     <if test="_parameter != null">
@@ -300,7 +308,7 @@
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `book_info`
     <set>
@@ -371,7 +379,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `book_info`
     set book_info_id = #{record.book_info_id,jdbcType=INTEGER},
@@ -400,7 +408,7 @@
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.cyouguang.autolibrary.entity.BookInfo">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `book_info`
     <set>
@@ -466,7 +474,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.cyouguang.autolibrary.entity.BookInfo">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `book_info`
     set title = #{title,jdbcType=VARCHAR},

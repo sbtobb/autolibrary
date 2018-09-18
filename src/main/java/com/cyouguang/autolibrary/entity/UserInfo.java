@@ -21,7 +21,7 @@ public class UserInfo implements Serializable {
      *   用户信息表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer user_info_id;
 
@@ -29,7 +29,7 @@ public class UserInfo implements Serializable {
      *   用户账号表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer user_id;
 
@@ -37,7 +37,7 @@ public class UserInfo implements Serializable {
      *   用户真实姓名
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String name;
 
@@ -45,7 +45,7 @@ public class UserInfo implements Serializable {
      *   性别
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String gender;
 
@@ -53,7 +53,7 @@ public class UserInfo implements Serializable {
      *   电子邮箱
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String email;
 
@@ -61,7 +61,7 @@ public class UserInfo implements Serializable {
      *   用户头像
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String avatar;
 
@@ -69,7 +69,7 @@ public class UserInfo implements Serializable {
      *   积分
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Long integral;
 
@@ -77,7 +77,7 @@ public class UserInfo implements Serializable {
      *   注册时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date register_time;
 
@@ -85,13 +85,13 @@ public class UserInfo implements Serializable {
      *   最后修改时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date modified_time;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -100,7 +100,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.user_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getUser_info_id() {
         return user_info_id;
@@ -108,7 +108,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withUser_info_id(Integer user_info_id) {
         this.setUser_info_id(user_info_id);
@@ -120,7 +120,7 @@ public class UserInfo implements Serializable {
      *
      * @param user_info_id the value for user_info.user_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_info_id(Integer user_info_id) {
         this.user_info_id = user_info_id;
@@ -131,7 +131,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getUser_id() {
         return user_id;
@@ -139,7 +139,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withUser_id(Integer user_id) {
         this.setUser_id(user_id);
@@ -151,7 +151,7 @@ public class UserInfo implements Serializable {
      *
      * @param user_id the value for user_info.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
@@ -162,7 +162,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.name
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getName() {
         return name;
@@ -170,7 +170,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withName(String name) {
         this.setName(name);
@@ -182,7 +182,7 @@ public class UserInfo implements Serializable {
      *
      * @param name the value for user_info.name
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setName(String name) {
         this.name = name;
@@ -193,7 +193,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.gender
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getGender() {
         return gender;
@@ -201,7 +201,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withGender(String gender) {
         this.setGender(gender);
@@ -213,7 +213,7 @@ public class UserInfo implements Serializable {
      *
      * @param gender the value for user_info.gender
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setGender(String gender) {
         this.gender = gender;
@@ -224,7 +224,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.email
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getEmail() {
         return email;
@@ -232,7 +232,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withEmail(String email) {
         this.setEmail(email);
@@ -244,7 +244,7 @@ public class UserInfo implements Serializable {
      *
      * @param email the value for user_info.email
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setEmail(String email) {
         this.email = email;
@@ -255,7 +255,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.avatar
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getAvatar() {
         return avatar;
@@ -263,7 +263,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withAvatar(String avatar) {
         this.setAvatar(avatar);
@@ -275,7 +275,7 @@ public class UserInfo implements Serializable {
      *
      * @param avatar the value for user_info.avatar
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setAvatar(String avatar) {
         this.avatar = avatar;
@@ -286,7 +286,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.integral
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Long getIntegral() {
         return integral;
@@ -294,7 +294,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withIntegral(Long integral) {
         this.setIntegral(integral);
@@ -306,7 +306,7 @@ public class UserInfo implements Serializable {
      *
      * @param integral the value for user_info.integral
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setIntegral(Long integral) {
         this.integral = integral;
@@ -317,7 +317,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.register_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getRegister_time() {
         return register_time;
@@ -325,7 +325,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withRegister_time(Date register_time) {
         this.setRegister_time(register_time);
@@ -337,7 +337,7 @@ public class UserInfo implements Serializable {
      *
      * @param register_time the value for user_info.register_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setRegister_time(Date register_time) {
         this.register_time = register_time;
@@ -348,7 +348,7 @@ public class UserInfo implements Serializable {
      *
      * @return the value of user_info.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getModified_time() {
         return modified_time;
@@ -356,7 +356,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserInfo withModified_time(Date modified_time) {
         this.setModified_time(modified_time);
@@ -368,7 +368,7 @@ public class UserInfo implements Serializable {
      *
      * @param modified_time the value for user_info.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setModified_time(Date modified_time) {
         this.modified_time = modified_time;
@@ -376,7 +376,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -399,7 +399,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -426,7 +426,7 @@ public class UserInfo implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

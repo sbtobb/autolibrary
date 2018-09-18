@@ -21,7 +21,7 @@ public class UserAccount implements Serializable {
      *   用户账号表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer user_id;
 
@@ -29,7 +29,7 @@ public class UserAccount implements Serializable {
      *   用户登录名
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String login_name;
 
@@ -37,7 +37,7 @@ public class UserAccount implements Serializable {
      *   md5加密的密码
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String password;
 
@@ -45,7 +45,7 @@ public class UserAccount implements Serializable {
      *   用户状态
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Byte user_stats;
 
@@ -53,13 +53,13 @@ public class UserAccount implements Serializable {
      *   最后修改时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date modified_time;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -68,7 +68,7 @@ public class UserAccount implements Serializable {
      *
      * @return the value of user_account.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getUser_id() {
         return user_id;
@@ -76,7 +76,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserAccount withUser_id(Integer user_id) {
         this.setUser_id(user_id);
@@ -88,7 +88,7 @@ public class UserAccount implements Serializable {
      *
      * @param user_id the value for user_account.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
@@ -99,7 +99,7 @@ public class UserAccount implements Serializable {
      *
      * @return the value of user_account.login_name
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getLogin_name() {
         return login_name;
@@ -107,7 +107,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserAccount withLogin_name(String login_name) {
         this.setLogin_name(login_name);
@@ -119,7 +119,7 @@ public class UserAccount implements Serializable {
      *
      * @param login_name the value for user_account.login_name
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setLogin_name(String login_name) {
         this.login_name = login_name;
@@ -130,7 +130,7 @@ public class UserAccount implements Serializable {
      *
      * @return the value of user_account.password
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getPassword() {
         return password;
@@ -138,7 +138,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserAccount withPassword(String password) {
         this.setPassword(password);
@@ -150,7 +150,7 @@ public class UserAccount implements Serializable {
      *
      * @param password the value for user_account.password
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPassword(String password) {
         this.password = password;
@@ -161,7 +161,7 @@ public class UserAccount implements Serializable {
      *
      * @return the value of user_account.user_stats
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Byte getUser_stats() {
         return user_stats;
@@ -169,7 +169,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserAccount withUser_stats(Byte user_stats) {
         this.setUser_stats(user_stats);
@@ -181,7 +181,7 @@ public class UserAccount implements Serializable {
      *
      * @param user_stats the value for user_account.user_stats
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_stats(Byte user_stats) {
         this.user_stats = user_stats;
@@ -192,7 +192,7 @@ public class UserAccount implements Serializable {
      *
      * @return the value of user_account.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getModified_time() {
         return modified_time;
@@ -200,7 +200,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserAccount withModified_time(Date modified_time) {
         this.setModified_time(modified_time);
@@ -212,7 +212,7 @@ public class UserAccount implements Serializable {
      *
      * @param modified_time the value for user_account.modified_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setModified_time(Date modified_time) {
         this.modified_time = modified_time;
@@ -220,7 +220,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -239,7 +239,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -262,7 +262,7 @@ public class UserAccount implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

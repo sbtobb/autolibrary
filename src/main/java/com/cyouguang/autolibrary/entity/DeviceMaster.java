@@ -20,7 +20,7 @@ public class DeviceMaster implements Serializable {
      *   设备主表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer device_id;
 
@@ -28,7 +28,7 @@ public class DeviceMaster implements Serializable {
      *   设备地址
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String place;
 
@@ -36,13 +36,13 @@ public class DeviceMaster implements Serializable {
      *   状态码
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Byte status;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -51,7 +51,7 @@ public class DeviceMaster implements Serializable {
      *
      * @return the value of device_master.device_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getDevice_id() {
         return device_id;
@@ -59,7 +59,7 @@ public class DeviceMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public DeviceMaster withDevice_id(Integer device_id) {
         this.setDevice_id(device_id);
@@ -71,7 +71,7 @@ public class DeviceMaster implements Serializable {
      *
      * @param device_id the value for device_master.device_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setDevice_id(Integer device_id) {
         this.device_id = device_id;
@@ -82,7 +82,7 @@ public class DeviceMaster implements Serializable {
      *
      * @return the value of device_master.place
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getPlace() {
         return place;
@@ -90,7 +90,7 @@ public class DeviceMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public DeviceMaster withPlace(String place) {
         this.setPlace(place);
@@ -102,7 +102,7 @@ public class DeviceMaster implements Serializable {
      *
      * @param place the value for device_master.place
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPlace(String place) {
         this.place = place;
@@ -113,7 +113,7 @@ public class DeviceMaster implements Serializable {
      *
      * @return the value of device_master.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Byte getStatus() {
         return status;
@@ -121,7 +121,7 @@ public class DeviceMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public DeviceMaster withStatus(Byte status) {
         this.setStatus(status);
@@ -133,7 +133,7 @@ public class DeviceMaster implements Serializable {
      *
      * @param status the value for device_master.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setStatus(Byte status) {
         this.status = status;
@@ -141,7 +141,7 @@ public class DeviceMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -158,7 +158,7 @@ public class DeviceMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -179,7 +179,7 @@ public class DeviceMaster implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

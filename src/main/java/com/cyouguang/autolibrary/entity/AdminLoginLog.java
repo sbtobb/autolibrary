@@ -21,7 +21,7 @@ public class AdminLoginLog implements Serializable {
      *   用户登录日志表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer log_id;
 
@@ -29,7 +29,7 @@ public class AdminLoginLog implements Serializable {
      *   管理员表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer admin_id;
 
@@ -37,7 +37,7 @@ public class AdminLoginLog implements Serializable {
      *   0 未成功 1 成功
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Byte status;
 
@@ -45,13 +45,13 @@ public class AdminLoginLog implements Serializable {
      *   log记录时间
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Date log_time;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -60,7 +60,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @return the value of admin_login_log.log_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getLog_id() {
         return log_id;
@@ -68,7 +68,7 @@ public class AdminLoginLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminLoginLog withLog_id(Integer log_id) {
         this.setLog_id(log_id);
@@ -80,7 +80,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @param log_id the value for admin_login_log.log_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setLog_id(Integer log_id) {
         this.log_id = log_id;
@@ -91,7 +91,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @return the value of admin_login_log.admin_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getAdmin_id() {
         return admin_id;
@@ -99,7 +99,7 @@ public class AdminLoginLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminLoginLog withAdmin_id(Integer admin_id) {
         this.setAdmin_id(admin_id);
@@ -111,7 +111,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @param admin_id the value for admin_login_log.admin_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setAdmin_id(Integer admin_id) {
         this.admin_id = admin_id;
@@ -122,7 +122,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @return the value of admin_login_log.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Byte getStatus() {
         return status;
@@ -130,7 +130,7 @@ public class AdminLoginLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminLoginLog withStatus(Byte status) {
         this.setStatus(status);
@@ -142,7 +142,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @param status the value for admin_login_log.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setStatus(Byte status) {
         this.status = status;
@@ -153,7 +153,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @return the value of admin_login_log.log_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Date getLog_time() {
         return log_time;
@@ -161,7 +161,7 @@ public class AdminLoginLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public AdminLoginLog withLog_time(Date log_time) {
         this.setLog_time(log_time);
@@ -173,7 +173,7 @@ public class AdminLoginLog implements Serializable {
      *
      * @param log_time the value for admin_login_log.log_time
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setLog_time(Date log_time) {
         this.log_time = log_time;
@@ -181,7 +181,7 @@ public class AdminLoginLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -199,7 +199,7 @@ public class AdminLoginLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -221,7 +221,7 @@ public class AdminLoginLog implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

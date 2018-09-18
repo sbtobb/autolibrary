@@ -20,7 +20,7 @@ public class BookTag implements Serializable {
      *   书籍标签表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer book_tag_id;
 
@@ -28,7 +28,7 @@ public class BookTag implements Serializable {
      *   书籍信息表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer book_info_id;
 
@@ -36,7 +36,7 @@ public class BookTag implements Serializable {
      *   图书电子标签
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String tag;
 
@@ -44,13 +44,13 @@ public class BookTag implements Serializable {
      *   0 未借出 1 已经借出
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Byte status;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -59,7 +59,7 @@ public class BookTag implements Serializable {
      *
      * @return the value of book_tag.book_tag_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getBook_tag_id() {
         return book_tag_id;
@@ -67,7 +67,7 @@ public class BookTag implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookTag withBook_tag_id(Integer book_tag_id) {
         this.setBook_tag_id(book_tag_id);
@@ -79,7 +79,7 @@ public class BookTag implements Serializable {
      *
      * @param book_tag_id the value for book_tag.book_tag_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBook_tag_id(Integer book_tag_id) {
         this.book_tag_id = book_tag_id;
@@ -90,7 +90,7 @@ public class BookTag implements Serializable {
      *
      * @return the value of book_tag.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getBook_info_id() {
         return book_info_id;
@@ -98,7 +98,7 @@ public class BookTag implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookTag withBook_info_id(Integer book_info_id) {
         this.setBook_info_id(book_info_id);
@@ -110,7 +110,7 @@ public class BookTag implements Serializable {
      *
      * @param book_info_id the value for book_tag.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBook_info_id(Integer book_info_id) {
         this.book_info_id = book_info_id;
@@ -121,7 +121,7 @@ public class BookTag implements Serializable {
      *
      * @return the value of book_tag.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTag() {
         return tag;
@@ -129,7 +129,7 @@ public class BookTag implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookTag withTag(String tag) {
         this.setTag(tag);
@@ -141,7 +141,7 @@ public class BookTag implements Serializable {
      *
      * @param tag the value for book_tag.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTag(String tag) {
         this.tag = tag;
@@ -152,7 +152,7 @@ public class BookTag implements Serializable {
      *
      * @return the value of book_tag.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Byte getStatus() {
         return status;
@@ -160,7 +160,7 @@ public class BookTag implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public BookTag withStatus(Byte status) {
         this.setStatus(status);
@@ -172,7 +172,7 @@ public class BookTag implements Serializable {
      *
      * @param status the value for book_tag.status
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setStatus(Byte status) {
         this.status = status;
@@ -180,7 +180,7 @@ public class BookTag implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -198,7 +198,7 @@ public class BookTag implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -220,7 +220,7 @@ public class BookTag implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

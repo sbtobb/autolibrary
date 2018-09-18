@@ -20,7 +20,7 @@ public class UserBook implements Serializable {
      *   用户信息表自增主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer user_book_id;
 
@@ -28,7 +28,7 @@ public class UserBook implements Serializable {
      *   用户账号表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer user_id;
 
@@ -36,7 +36,7 @@ public class UserBook implements Serializable {
      *   书籍信息表主键id
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private Integer book_info_id;
 
@@ -44,7 +44,7 @@ public class UserBook implements Serializable {
      *   图书电子标签
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String tag;
 
@@ -52,7 +52,7 @@ public class UserBook implements Serializable {
      *   书籍标题
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String title;
 
@@ -60,13 +60,13 @@ public class UserBook implements Serializable {
      *   图片地址
      *
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private String pic;
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     private static final long serialVersionUID = 1L;
 
@@ -75,7 +75,7 @@ public class UserBook implements Serializable {
      *
      * @return the value of user_book.user_book_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getUser_book_id() {
         return user_book_id;
@@ -83,7 +83,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserBook withUser_book_id(Integer user_book_id) {
         this.setUser_book_id(user_book_id);
@@ -95,7 +95,7 @@ public class UserBook implements Serializable {
      *
      * @param user_book_id the value for user_book.user_book_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_book_id(Integer user_book_id) {
         this.user_book_id = user_book_id;
@@ -106,7 +106,7 @@ public class UserBook implements Serializable {
      *
      * @return the value of user_book.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getUser_id() {
         return user_id;
@@ -114,7 +114,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserBook withUser_id(Integer user_id) {
         this.setUser_id(user_id);
@@ -126,7 +126,7 @@ public class UserBook implements Serializable {
      *
      * @param user_id the value for user_book.user_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
@@ -137,7 +137,7 @@ public class UserBook implements Serializable {
      *
      * @return the value of user_book.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public Integer getBook_info_id() {
         return book_info_id;
@@ -145,7 +145,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserBook withBook_info_id(Integer book_info_id) {
         this.setBook_info_id(book_info_id);
@@ -157,7 +157,7 @@ public class UserBook implements Serializable {
      *
      * @param book_info_id the value for user_book.book_info_id
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setBook_info_id(Integer book_info_id) {
         this.book_info_id = book_info_id;
@@ -168,7 +168,7 @@ public class UserBook implements Serializable {
      *
      * @return the value of user_book.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTag() {
         return tag;
@@ -176,7 +176,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserBook withTag(String tag) {
         this.setTag(tag);
@@ -188,7 +188,7 @@ public class UserBook implements Serializable {
      *
      * @param tag the value for user_book.tag
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTag(String tag) {
         this.tag = tag;
@@ -199,7 +199,7 @@ public class UserBook implements Serializable {
      *
      * @return the value of user_book.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getTitle() {
         return title;
@@ -207,7 +207,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserBook withTitle(String title) {
         this.setTitle(title);
@@ -219,7 +219,7 @@ public class UserBook implements Serializable {
      *
      * @param title the value for user_book.title
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setTitle(String title) {
         this.title = title;
@@ -230,7 +230,7 @@ public class UserBook implements Serializable {
      *
      * @return the value of user_book.pic
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public String getPic() {
         return pic;
@@ -238,7 +238,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public UserBook withPic(String pic) {
         this.setPic(pic);
@@ -250,7 +250,7 @@ public class UserBook implements Serializable {
      *
      * @param pic the value for user_book.pic
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     public void setPic(String pic) {
         this.pic = pic;
@@ -258,7 +258,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public String toString() {
@@ -278,7 +278,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public boolean equals(Object that) {
@@ -302,7 +302,7 @@ public class UserBook implements Serializable {
 
     /**
      *
-     * @mbg.generated Mon Sep 17 17:50:48 CST 2018
+     * @mbg.generated Tue Sep 18 08:11:50 CST 2018
      */
     @Override
     public int hashCode() {

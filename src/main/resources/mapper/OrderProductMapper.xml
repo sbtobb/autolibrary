@@ -3,7 +3,7 @@
 <mapper namespace="com.cyouguang.autolibrary.dao.OrderProductMapper">
   <resultMap id="BaseResultMap" type="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     <id column="product_id" jdbcType="INTEGER" property="product_id" />
     <result column="order_id" jdbcType="INTEGER" property="order_id" />
@@ -13,7 +13,7 @@
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -45,7 +45,7 @@
   </sql>
   <sql id="Update_By_Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -77,13 +77,13 @@
   </sql>
   <sql id="Base_Column_List">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     product_id, order_id, tag, title, price
   </sql>
   <select id="selectByExample" parameterType="com.cyouguang.autolibrary.entity.OrderProductExample" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     select
     <if test="distinct">
@@ -97,10 +97,18 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     select 
     <include refid="Base_Column_List" />
@@ -109,14 +117,14 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     delete from `order_product`
     where product_id = #{product_id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.cyouguang.autolibrary.entity.OrderProductExample">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     delete from `order_product`
     <if test="_parameter != null">
@@ -125,7 +133,7 @@
   </delete>
   <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     insert into `order_product` (product_id, order_id, tag, 
       title, price)
@@ -134,7 +142,7 @@
   </insert>
   <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     insert into `order_product`
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -174,7 +182,7 @@
   </insert>
   <select id="countByExample" parameterType="com.cyouguang.autolibrary.entity.OrderProductExample" resultType="java.lang.Long">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     select count(*) from `order_product`
     <if test="_parameter != null">
@@ -183,7 +191,7 @@
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     <set>
@@ -209,7 +217,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     set product_id = #{record.product_id,jdbcType=INTEGER},
@@ -223,7 +231,7 @@
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     <set>
@@ -244,7 +252,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
-      WARNING - @mbg.generated  This element was generated on Mon Sep 17 17:50:48 CST 2018. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
     update `order_product`
     set order_id = #{order_id,jdbcType=INTEGER},
