@@ -26,10 +26,11 @@ public interface UserService {
      * @param loginName 登录用户名
      * @param password md5加密密码
      * @param name 真实姓名
+     * @param gender 性别
      * @param email 电子邮件
      * @return StatusMessagePojo 200 成功
      */
-    StatusMessagePojo register(String loginName, String password,String name,String email);
+    StatusMessagePojo register(String loginName, String password,String name,String gender,String email);
 
     /**
      * 取到用户借阅信息
@@ -54,10 +55,11 @@ public interface UserService {
 
     /**
      * 结算订单
+     * @param userId 用户id
      * @param orderId 订单id
      * @return 200 结算成功
      */
-    StatusMessagePojo checkOut(int orderId);
+    StatusMessagePojo payment(int userId,int orderId);
 
     /**
      * 取订单信息
