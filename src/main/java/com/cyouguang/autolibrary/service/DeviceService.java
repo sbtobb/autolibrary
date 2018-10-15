@@ -3,6 +3,7 @@ package com.cyouguang.autolibrary.service;
 import com.cyouguang.autolibrary.entity.BookTag;
 import com.cyouguang.autolibrary.entity.OrderMaster;
 import com.cyouguang.autolibrary.pojo.StatusMessagePojo;
+import org.springframework.stereotype.Service;
 
 /**
  * @author CyouGuang
@@ -43,7 +44,7 @@ public interface DeviceService {
      * @param tag 标签
      * @return BookTag
      */
-    public BookTag getBookTag(String tag);
+    BookTag getBookTag(String tag);
 
     /**
      * 设备上线

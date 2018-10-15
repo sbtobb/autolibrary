@@ -9,14 +9,14 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class xyPojo {
+public class XYPojo {
     private String x;
     private String y;
 
-    public xyPojo() {
+    public XYPojo() {
     }
 
-    public xyPojo(String x, String y) {
+    public XYPojo(String x, String y) {
         this.x = x;
         this.y = y;
     }

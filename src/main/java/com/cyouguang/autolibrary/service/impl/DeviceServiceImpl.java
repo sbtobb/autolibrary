@@ -15,18 +15,23 @@ import java.util.List;
  */
 @Service
 public class DeviceServiceImpl implements DeviceService {
+    private final OrderMasterMapper orderMasterMapper;
+    private final OrderProductMapper orderProductMapper;
+    private final BookTagMapper bookTagMapper;
+    private final BookInfoMapper bookInfoMapper;
+    private final BookBorrowLogMapper bookBorrowLogMapper;
+    private final DeviceMasterMapper deviceMasterMapper;
+
     @Autowired
-    private OrderMasterMapper orderMasterMapper;
-    @Autowired
-    private OrderProductMapper orderProductMapper;
-    @Autowired
-    private BookTagMapper bookTagMapper;
-    @Autowired
-    private BookInfoMapper bookInfoMapper;
-    @Autowired
-    private BookBorrowLogMapper bookBorrowLogMapper;
-    @Autowired
-    private DeviceMasterMapper deviceMasterMapper;
+    public DeviceServiceImpl(OrderMasterMapper orderMasterMapper, OrderProductMapper orderProductMapper, BookTagMapper bookTagMapper, BookInfoMapper bookInfoMapper, BookBorrowLogMapper bookBorrowLogMapper, DeviceMasterMapper deviceMasterMapper) {
+        this.orderMasterMapper = orderMasterMapper;
+        this.orderProductMapper = orderProductMapper;
+        this.bookTagMapper = bookTagMapper;
+        this.bookInfoMapper = bookInfoMapper;
+        this.bookBorrowLogMapper = bookBorrowLogMapper;
+        this.deviceMasterMapper = deviceMasterMapper;
+    }
+
     @Override
     public OrderMaster createOrder(int deviceId) {
         OrderMaster orderMaster = new OrderMaster();

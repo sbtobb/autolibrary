@@ -1,8 +1,9 @@
 package com.cyouguang.autolibrary.service;
 
 import com.cyouguang.autolibrary.entity.*;
+import com.cyouguang.autolibrary.pojo.BookIsbnPojo;
 import com.cyouguang.autolibrary.pojo.StatusMessagePojo;
-import com.cyouguang.autolibrary.pojo.xyPojo;
+import com.cyouguang.autolibrary.pojo.XYPojo;
 
 import java.util.Date;
 import java.util.List;
@@ -87,7 +88,7 @@ public interface AdminService {
      * @param isbn isbn号码
      * @return bookinfo
      */
-    BookInfo getBookInfoFromISBN(String isbn);
+    BookIsbnPojo getBookInfoFromISBN(String isbn);
 
     /**
      * 添加图书
@@ -118,7 +119,7 @@ public interface AdminService {
      * @param endDate 结束时间
      * @return x 日期 y 销售额
      */
-    List<xyPojo> getSalesWithDate(Date beginDate,Date endDate);
+    List<XYPojo> getSalesWithDate(Date beginDate, Date endDate);
 
     /**
      * 取出今日销售额
@@ -141,7 +142,7 @@ public interface AdminService {
      * @return x 日期 y 访问人数
      */
 
-    List<xyPojo> getVistersWithDate(Date beginDate,Date endDate);
+    List<XYPojo> getVistersWithDate(Date beginDate, Date endDate);
 
     /**
      * 取出今日访问人数
