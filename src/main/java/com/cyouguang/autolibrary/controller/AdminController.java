@@ -1,15 +1,18 @@
 package com.cyouguang.autolibrary.controller;
 
+import com.alibaba.fastjson.JSONObject;
+import com.cyouguang.autolibrary.dto.DashboardDTO;
 import com.cyouguang.autolibrary.dto.StatusMessageDTO;
 import com.cyouguang.autolibrary.entity.*;
-import com.cyouguang.autolibrary.pojo.LoginPojo;
-import com.cyouguang.autolibrary.pojo.StatusMessagePojo;
-import com.cyouguang.autolibrary.pojo.XYPojo;
+import com.cyouguang.autolibrary.pojo.*;
 import com.cyouguang.autolibrary.service.AdminService;
 import com.cyouguang.autolibrary.util.TimeUtil;
+import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.resource.HttpResource;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.constraints.Past;
 import java.util.Date;
 import java.util.List;
@@ -28,17 +31,53 @@ public class AdminController {
         this.adminService = adminService;
     }
     @RequestMapping("/login")
-    public StatusMessagePojo login(@RequestBody LoginPojo loginPojo) {
+    public Object login(@RequestBody LoginPojo loginPojo, HttpSession session) {
         if (loginPojo == null){
             return new StatusMessagePojo(404,"账号或密码不能为空");
         }
-        System.out.print(loginPojo);
-        return adminService.login(loginPojo.getUsername(),loginPojo.getPassword());
+        System.out.println(loginPojo);
+        StatusMessagePojo statusMessagePojo = adminService.login(loginPojo.getUsername(),loginPojo.getPassword());
+        Object adminAccountObj = session.getAttribute("AdminDetail");
+        if (adminAccountObj == null) {
+            if (statusMessagePojo.getStatus() == 200){
+                AdminAccount adminAccount = adminService.getAdminAccount(loginPojo.getUsername());
+                if (adminAccount == null){
+                    return new StatusMessagePojo(500,"获取管理员信息失败！");
+                }
+                session.setAttribute("AdminDetail",adminAccount);
+            }else {
+                return new StatusMessagePojo(401,"账号或密码错误！");
+            }
+        }else{
+            System.out.print("已存在session，"+session.getAttribute("AdminDetail"));
+        }
+        return new CodeDataPojo(20000,"{\"token\":\""+session.getId()+"\"}");
+    }
+    @GetMapping("/info")
+    public Object getInfo(HttpSession session){
+        Object adminAccountObj = session.getAttribute("AdminDetail");
+        if (adminAccountObj == null){
+            return new StatusMessagePojo(401,"请先登录");
+        }
+        AdminAccount adminAccount = (AdminAccount)adminAccountObj;
+        AdminInfoPojo adminInfoPojo =  new AdminInfoPojo(adminService.getAdminInfo(adminAccount.getAdmin_id()));
+        System.out.println(adminInfoPojo);
+        return new CodeDataPojo(20000,adminInfoPojo);
+    }
+    @PostMapping("/logout")
+    public CodeDataPojo logout(HttpSession session){
+        session.removeAttribute("AdminDetail");
+        return new CodeDataPojo(20000,"注销成功");
     }
 
     @GetMapping("/getUserInfoPage")
-    public StatusMessageDTO getUserInfoPage(int currentPage, int pageSize) {
-        return new StatusMessageDTO(adminService.getUserInfoPage(currentPage,pageSize));
+    public Object getUserInfoPage(int currentPage, int pageSize) {
+        return new CodeDataPojo(20000,adminService.getUserInfoPage(currentPage,pageSize));
+    }
+
+    @GetMapping("/getUserLoginLog")
+    public Object getUserLoginLog(int currentPage, int pageSize){
+        return new CodeDataPojo(20000,adminService.getUserLoginLog(currentPage,pageSize));
     }
 
     @GetMapping("/changeIntegral")
@@ -108,18 +147,33 @@ public class AdminController {
         return adminService.getSaleToday();
     }
 
-    @GetMapping("/getVisterTotalWithDate")
-    public int getVisterTotalWithDate(String beginDate, String endDate) {
-        return adminService.getVisterTotalWithDate(TimeUtil.strToDate(beginDate),TimeUtil.strToDate(endDate));
+    @GetMapping("/getVisitorTotalWithDate")
+    public int getVisitorTotalWithDate(String beginDate, String endDate) {
+        return adminService.getVisitorTotalWithDate(TimeUtil.strToDate(beginDate),TimeUtil.strToDate(endDate));
     }
 
-    @GetMapping("/getVistersWithDate")
-    public StatusMessageDTO getVistersWithDate(String beginDate, String endDate) {
-        return new StatusMessageDTO(adminService.getVistersWithDate(TimeUtil.strToDate(beginDate),TimeUtil.strToDate(endDate)));
+    @GetMapping("/getVisitorsWithDate")
+    public StatusMessageDTO getVisitorsWithDate(String beginDate, String endDate) {
+        return new StatusMessageDTO(adminService.getVisitorsWithDate(TimeUtil.strToDate(beginDate),TimeUtil.strToDate(endDate)));
     }
 
-    @GetMapping("/getVisterToday")
-    public int getVisterToday() {
-        return adminService.getVisterToday();
+    @GetMapping("/getVisitorToday")
+    public int getVisitorToday() {
+        return adminService.getVisitorToday();
+    }
+
+    @GetMapping("/dashboard")
+    public Object dashboard(HttpSession session){
+        Object adminAccountObj = session.getAttribute("AdminDetail");
+        if (adminAccountObj == null){
+            return new StatusMessagePojo(401,"请先登录");
+        }
+        PanelGroupDataPojo panelGroupDataPojo = new PanelGroupDataPojo();
+        panelGroupDataPojo.setSale((int) adminService.getSaleToday());
+        panelGroupDataPojo.setVisitor(adminService.getVisitorToday());
+        panelGroupDataPojo.setPayment(adminService.getPaymentNumberToday());
+        LineChartDataPojo lineChartDataPojo = new LineChartDataPojo(adminService.getSalesArrayWeek(),adminService.getVisitorArrayWeek());
+        DashboardDTO dashboardDTO = new DashboardDTO(panelGroupDataPojo,lineChartDataPojo);
+        return new CodeDataPojo(20000,dashboardDTO);
     }
 }

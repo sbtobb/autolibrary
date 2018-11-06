@@ -46,4 +46,15 @@ public class TimeUtil {
         }
         return time;
     }
+    public static Date getPreWeekDate(){
+        return new Date(System.currentTimeMillis() - (long) 7 * 24 * 60 * 60 * 1000);
+    }
+
+    public static Date getPreDay(Date nowDate){
+        return new Date(nowDate.getTime() - (long) 24 * 60 * 60 * 1000);
+    }
+
+    public static Date getNextDay(Date nowDate){
+        return new Date(nowDate.getTime() + (long) 24 * 60 * 60 * 1000);
+    }
 }

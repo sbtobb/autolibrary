@@ -22,12 +22,34 @@ public interface AdminService {
     StatusMessagePojo login(String loginName, String password);
 
     /**
+     * 获取管理员登录信息
+     * @param loginName 登录用户名
+     * @return 管理员登录信息
+     */
+    AdminAccount getAdminAccount(String loginName);
+
+    /**
+     * 获取管理员信息
+     * @param adminId 管理员id
+     * @return 管理员
+     */
+    AdminInfo getAdminInfo(int adminId);
+
+    /**
      * 取到分页用户信息表
      * @param currentPage 页数
      * @param pageSize 页大小
      * @return 用户信息 list
      */
     List<UserInfo> getUserInfoPage(int currentPage,int pageSize);
+
+    /**
+     * 获取分页用户信息
+     * @param currentPage 页数
+     * @param pageSize 页大小
+     * @return 用户登录信息 list
+     */
+    List<UserLoginLog> getUserLoginLog(int currentPage,int pageSize);
 
     /**
      * 修改用户积分
@@ -122,6 +144,12 @@ public interface AdminService {
     List<XYPojo> getSalesWithDate(Date beginDate, Date endDate);
 
     /**
+     * 取出本周销售记录
+     * @return
+     */
+    int[] getSalesArrayWeek();
+
+    /**
      * 取出今日销售额
      * @return 销售额
      */
@@ -133,7 +161,7 @@ public interface AdminService {
      * @param endDate 结束时间
      * @return 总访问人数
      */
-    int getVisterTotalWithDate(Date beginDate,Date endDate);
+    int getVisitorTotalWithDate(Date beginDate,Date endDate);
 
     /**
      * 取出单日访问人数
@@ -142,13 +170,25 @@ public interface AdminService {
      * @return x 日期 y 访问人数
      */
 
-    List<XYPojo> getVistersWithDate(Date beginDate, Date endDate);
+    List<XYPojo> getVisitorsWithDate(Date beginDate, Date endDate);
+
+    /**
+     * 获取本周7天 包括今天的访问人数 数组
+     * @return 排序 时间顺序
+     */
+    int[] getVisitorArrayWeek();
 
     /**
      * 取出今日访问人数
      * @return 访问人数
      */
-    int getVisterToday();
+    int getVisitorToday();
+
+    /**
+     * 取出今天的支付笔数
+     * @return 支付笔数
+     */
+    int getPaymentNumberToday();
 
 
 }

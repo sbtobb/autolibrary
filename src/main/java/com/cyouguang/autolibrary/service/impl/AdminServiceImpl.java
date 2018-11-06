@@ -13,9 +13,11 @@ import com.cyouguang.autolibrary.util.TimeUtil;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
+import org.aspectj.weaver.Lint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -26,6 +28,7 @@ import java.util.*;
 @Service
 public class AdminServiceImpl implements AdminService {
     private final AdminAccountMapper adminAccountMapper;
+    private final AdminInfoMapper adminInfoMapper;
     private final AdminLoginLogMapper adminLoginLogMapper;
     private final UserInfoMapper userInfoMapper;
     private final BookInfoMapper bookInfoMapper;
@@ -37,7 +40,7 @@ public class AdminServiceImpl implements AdminService {
     private final UserLoginLogMapper userLoginLogMapper;
 
     @Autowired
-    public AdminServiceImpl(AdminAccountMapper adminAccountMapper, AdminLoginLogMapper adminLoginLogMapper, UserInfoMapper userInfoMapper, BookInfoMapper bookInfoMapper, BookTagMapper bookTagMapper, BookBorrowLogMapper bookBorrowLogMapper, DeviceMasterMapper deviceMasterMapper, OrderMasterMapper orderMasterMapper, OrderProductMapper orderProductMapper, UserLoginLogMapper userLoginLogMapper) {
+    public AdminServiceImpl(AdminAccountMapper adminAccountMapper, AdminLoginLogMapper adminLoginLogMapper, UserInfoMapper userInfoMapper, BookInfoMapper bookInfoMapper, BookTagMapper bookTagMapper, BookBorrowLogMapper bookBorrowLogMapper, DeviceMasterMapper deviceMasterMapper, OrderMasterMapper orderMasterMapper, OrderProductMapper orderProductMapper, UserLoginLogMapper userLoginLogMapper,AdminInfoMapper adminInfoMapper) {
         this.adminAccountMapper = adminAccountMapper;
         this.adminLoginLogMapper = adminLoginLogMapper;
         this.userInfoMapper = userInfoMapper;
@@ -48,6 +51,7 @@ public class AdminServiceImpl implements AdminService {
         this.orderMasterMapper = orderMasterMapper;
         this.orderProductMapper = orderProductMapper;
         this.userLoginLogMapper = userLoginLogMapper;
+        this.adminInfoMapper = adminInfoMapper;
     }
 
     @Override
@@ -55,17 +59,11 @@ public class AdminServiceImpl implements AdminService {
         if ("".equals(loginName) || "".equals(password)){
             return new StatusMessagePojo(404,"用户名或密码为空");
         }
-        AdminAccountExample adminAccountExample = new AdminAccountExample();
-        AdminAccountExample.Criteria criteria = adminAccountExample.createCriteria();
-        //添加查询约束条件
-        criteria.andLogin_nameEqualTo(loginName);
-
-        List<AdminAccount> adminAccountList = adminAccountMapper.selectByExample(adminAccountExample);
-        if (adminAccountList.size() <= 0){
+        AdminAccount adminAccount = getAdminAccount(loginName);
+        if (adminAccount == null){
             return new StatusMessagePojo(404,"此用户未注册");
         }
-        //取出第一条记录
-        AdminAccount adminAccount = adminAccountList.get(0);
+
         if (!adminAccount.getPassword().equals(password)) {
             return new StatusMessagePojo(404,"密码不正确");
         }
@@ -77,6 +75,28 @@ public class AdminServiceImpl implements AdminService {
             return new StatusMessagePojo(500,"未能正确记录登录日志");
         }
         return new StatusMessagePojo(200,"登录成功");
+    }
+
+    @Override
+    public AdminAccount getAdminAccount(String loginName) {
+        AdminAccountExample adminAccountExample = new AdminAccountExample();
+        AdminAccountExample.Criteria criteria = adminAccountExample.createCriteria();
+        //添加查询约束条件
+        criteria.andLogin_nameEqualTo(loginName);
+        List<AdminAccount> adminAccountList = adminAccountMapper.selectByExample(adminAccountExample);
+        if (adminAccountList.size() <= 0){
+            return null;
+        }
+        //取出第一条记录
+        return adminAccountList.get(0);
+    }
+
+    @Override
+    public AdminInfo getAdminInfo(int adminId) {
+        AdminInfoExample adminInfoExample = new AdminInfoExample();
+        AdminInfoExample.Criteria criteria = adminInfoExample.createCriteria();
+        criteria.andAdmin_idEqualTo(adminId);
+        return adminInfoMapper.selectByExample(adminInfoExample).get(0);
     }
 
     @Override
@@ -133,6 +153,13 @@ public class AdminServiceImpl implements AdminService {
         OrderMasterExample orderMasterExample = new OrderMasterExample();
         orderMasterExample.setPageInfo(currentPage,pageSize);
         return orderMasterMapper.selectByExample(orderMasterExample);
+    }
+
+    @Override
+    public List<UserLoginLog> getUserLoginLog(int currentPage, int pageSize) {
+        UserLoginLogExample userLoginLogExample = new UserLoginLogExample();
+        userLoginLogExample.setPageInfo(currentPage,pageSize);
+        return userLoginLogMapper.selectByExample(userLoginLogExample);
     }
 
     @Override
@@ -250,15 +277,18 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public double getSaleToday() {
-        Date date = new Date();
+        return getSaleWithDate(new Date());
+    }
+    private double getSaleWithDate(Date date){
         Date beginDate = TimeUtil.setTimeBegin(date);
         Date endDate = TimeUtil.setTimeEnd(date);
         return getSaleTotalWithDate(beginDate,endDate);
     }
 
+
     @Override
-    public int getVisterTotalWithDate(Date beginDate, Date endDate) {
-        List<XYPojo> xyPojoList = getVistersWithDate(beginDate,endDate);
+    public int getVisitorTotalWithDate(Date beginDate, Date endDate) {
+        List<XYPojo> xyPojoList = getVisitorsWithDate(beginDate,endDate);
         int total = 0;
         for (XYPojo xyPojo:xyPojoList) {
             total += Double.valueOf(xyPojo.getY());
@@ -267,7 +297,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public List<XYPojo> getVistersWithDate(Date beginDate, Date endDate) {
+    public List<XYPojo> getVisitorsWithDate(Date beginDate, Date endDate) {
         List<XYPojo> xyPojoList = new ArrayList<>();
 
         UserLoginLogExample userLoginLogExample = new UserLoginLogExample();
@@ -304,10 +334,47 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public int getVisterToday() {
+    public int getVisitorToday() {
+        return getVisitorWithDate( new Date());
+    }
+
+    private int getVisitorWithDate(Date date){
+        Date beginDate = TimeUtil.setTimeBegin(date);
+        Date endDate = TimeUtil.setTimeEnd(date);
+        return getVisitorTotalWithDate(beginDate,endDate);
+    }
+
+    @Override
+    public int getPaymentNumberToday() {
         Date date = new Date();
         Date beginDate = TimeUtil.setTimeBegin(date);
         Date endDate = TimeUtil.setTimeEnd(date);
-        return getVisterTotalWithDate(beginDate,endDate);
+        OrderMasterExample orderMasterExample = new OrderMasterExample();
+        OrderMasterExample.Criteria criteria = orderMasterExample.createCriteria();
+        criteria.andCreate_timeBetween(beginDate,endDate);
+        List<OrderMaster> orderMasterList = orderMasterMapper.selectByExample(orderMasterExample);
+        return orderMasterList.size();
+    }
+
+    @Override
+    public int[] getSalesArrayWeek() {
+        int[] salesArray = new int[7];
+        Date nowDate = new Date();
+        Date preWeekDate = TimeUtil.getPreWeekDate();
+        for (int i = 0; preWeekDate.getTime() <= nowDate.getTime() ; preWeekDate = TimeUtil.getNextDay(preWeekDate)) {
+            salesArray[i] = (int) getSaleWithDate(preWeekDate);
+        }
+        return salesArray;
+    }
+
+    @Override
+    public int[] getVisitorArrayWeek() {
+        int[] visitorArray = new int[7];
+        Date nowDate = new Date();
+        Date preWeekDate = TimeUtil.getPreWeekDate();
+        for (int i = 0; preWeekDate.getTime() <= nowDate.getTime() ; preWeekDate = TimeUtil.getNextDay(preWeekDate)) {
+            visitorArray[i] = getVisitorWithDate(preWeekDate);
+        }
+        return visitorArray;
     }
 }
