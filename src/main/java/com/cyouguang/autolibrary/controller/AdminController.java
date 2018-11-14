@@ -1,21 +1,17 @@
 package com.cyouguang.autolibrary.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.cyouguang.autolibrary.dto.DashboardDTO;
 import com.cyouguang.autolibrary.dto.StatusMessageDTO;
 import com.cyouguang.autolibrary.entity.*;
 import com.cyouguang.autolibrary.pojo.*;
 import com.cyouguang.autolibrary.service.AdminService;
+import com.cyouguang.autolibrary.service.UserService;
 import com.cyouguang.autolibrary.util.TimeUtil;
-import org.apache.http.HttpResponse;
+import org.aspectj.apache.bcel.classfile.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.resource.HttpResource;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.constraints.Past;
-import java.util.Date;
-import java.util.List;
 
 /**
  * @author CyouGuang
@@ -25,10 +21,12 @@ import java.util.List;
 @RequestMapping("/api/admin")
 public class AdminController {
     private final AdminService adminService;
+    private final UserService userService;
 
     @Autowired
-    public AdminController(AdminService adminService) {
+    public AdminController(AdminService adminService, UserService userService) {
         this.adminService = adminService;
+        this.userService = userService;
     }
     @RequestMapping("/login")
     public Object login(@RequestBody LoginPojo loginPojo, HttpSession session) {
@@ -81,44 +79,53 @@ public class AdminController {
     }
 
     @GetMapping("/changeIntegral")
-    public StatusMessagePojo changeIntegral(int userInfoId, double integral) {
-        return adminService.changeIntegral(userInfoId,integral);
+    public Object changeIntegral(int userInfoId, double integral) {
+        System.out.println("integral:"+integral);
+        StatusMessagePojo statusMessagePojo = adminService.changeIntegral(userInfoId,integral);
+        if (statusMessagePojo.getStatus() == 200){
+            return new CodeDataPojo(20000,"修改成功");
+        }
+        return statusMessagePojo;
+    }
+    @GetMapping("/getListUserBook")
+    public Object getListUserBook(int userID){
+        return new CodeDataPojo(20000,userService.getListUserBook(userID));
     }
 
     @GetMapping("/getBookInfoPage")
-    public StatusMessageDTO getBookInfoPage(int currentPage, int pageSize) {
-        return new StatusMessageDTO(adminService.getBookInfoPage(currentPage,pageSize));
+    public Object getBookInfoPage(int currentPage, int pageSize) {
+        return new CodeDataPojo(20000,adminService.getBookInfoPage(currentPage,pageSize));
     }
 
     @GetMapping("/getBookTagList")
-    public StatusMessageDTO getBookTagList(int bookInfoId) {
-        return new StatusMessageDTO(adminService.getBookTagList(bookInfoId));
+    public Object getBookTagList(int bookInfoId) {
+        return new CodeDataPojo(20000,adminService.getBookTagList(bookInfoId));
     }
 
     @GetMapping("/getBookBorrowLogPage")
-    public StatusMessageDTO getBookBorrowLogPage(int currentPage, int pageSize) {
-        return new StatusMessageDTO(adminService.getBookBorrowLogPage(currentPage,pageSize));
+    public Object getBookBorrowLogPage(int currentPage, int pageSize) {
+        return new CodeDataPojo(20000,adminService.getBookBorrowLogPage(currentPage,pageSize));
     }
 
     @GetMapping("/getDeviceMasterPage")
-    public StatusMessageDTO getDeviceMasterPage(int currentPage, int pageSize) {
-        return new StatusMessageDTO(adminService.getDeviceMasterPage(currentPage,pageSize));
+    public Object getDeviceMasterPage(int currentPage, int pageSize) {
+        return new CodeDataPojo(20000,adminService.getDeviceMasterPage(currentPage,pageSize));
     }
 
     @GetMapping("/getOrderMaster")
-    public StatusMessageDTO getOrderMaster(int currentPage, int pageSize) {
-        return new StatusMessageDTO(adminService.getOrderMaster(currentPage,pageSize));
+    public Object getOrderMaster(int currentPage, int pageSize) {
+        return new CodeDataPojo(20000,adminService.getOrderMaster(currentPage,pageSize));
     }
 
     @GetMapping("/getOrderProduct")
-    public StatusMessageDTO getOrderProduct(int orderId) {
-        return new StatusMessageDTO(adminService.getOrderProduct(orderId));
+    public Object getOrderProduct(int orderId) {
+        return new CodeDataPojo(20000,adminService.getOrderProduct(orderId));
     }
 
     @GetMapping("/getBookInfoFromISBN")
     public StatusMessageDTO getBookInfoFromISBN(String isbn) {
         StatusMessageDTO statusMessageDTO =  new StatusMessageDTO(adminService.getBookInfoFromISBN(isbn));
-        System.out.print(statusMessageDTO);
+        System.out.println(statusMessageDTO);
         return statusMessageDTO;
     }
 
@@ -127,9 +134,22 @@ public class AdminController {
         return adminService.addBookWithBookInfo(bookInfo);
     }
 
+    @GetMapping("/addBookWithISBN")
+    public Object addBookWithISBN(String isbn){
+        StatusMessagePojo statusMessagePojo = adminService.addBookWithISBN(isbn);
+        if (statusMessagePojo.getStatus() == 200){
+            return new CodeDataPojo(20000,"添加图书成功！");
+        }
+        return statusMessagePojo;
+    }
+
     @GetMapping("/addBookTag")
-    public StatusMessagePojo addBookTag(int bookInfoId, String tag) {
-        return adminService.addBookTag(bookInfoId,tag);
+    public Object addBookTag(int bookInfoId, String tag) {
+        StatusMessagePojo statusMessagePojo = adminService.addBookTag(bookInfoId,tag);
+        if (statusMessagePojo.getStatus() == 200){
+            return new CodeDataPojo(20000,statusMessagePojo.getMessage());
+        }
+        return statusMessagePojo;
     }
 
     @GetMapping("/getSaleTotalWithDate")

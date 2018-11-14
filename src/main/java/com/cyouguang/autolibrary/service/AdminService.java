@@ -120,6 +120,12 @@ public interface AdminService {
     StatusMessagePojo addBookWithBookInfo(BookInfo bookInfo);
 
     /**
+     * 通过isbn添加图书
+     * @param isbn isbn号
+     * @return 状态信息码 200 成功
+     */
+    StatusMessagePojo addBookWithISBN(String isbn);
+    /**
      * 添加电子标签
      * @param bookInfoId 图书id
      * @param tag 电子标签

@@ -112,7 +112,7 @@ public class AdminServiceImpl implements AdminService {
         if(userInfo == null){
             return new StatusMessagePojo(404,"未找到该用户");
         }
-        userInfo.setIntegral(userInfo.getIntegral()+(long)integral);
+        userInfo.setIntegral((long)integral);
         if(userInfoMapper.updateByPrimaryKeySelective(userInfo) == 0){
             return new StatusMessagePojo(500,"服务器错误，未能更新数据");
         }
@@ -209,10 +209,47 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public StatusMessagePojo addBookWithBookInfo(BookInfo bookInfo) {
+        if(checkRepeat(bookInfo.getTitle())){
+            //若书本已存在
+            return new StatusMessagePojo(500,"该图书已在图书馆中");
+        }
         if (bookInfoMapper.insertSelective(bookInfo) == 0){
             return new StatusMessagePojo(500,"服务器错误，新建书籍失败");
         }
         return new StatusMessagePojo(200,"新建书籍成功");
+    }
+
+    @Override
+    public StatusMessagePojo addBookWithISBN(String isbn) {
+        BookIsbnPojo bookIsbnPojo = getBookInfoFromISBN(isbn);
+        if (bookIsbnPojo == null || "".equals(bookIsbnPojo.getTitle())){
+            //若书名为空时
+            return new StatusMessagePojo(500,"isbn有误，无法找到该图书");
+        }
+        BookInfo bookInfo = new BookInfo();
+        bookInfo.setTitle(bookIsbnPojo.getTitle());
+        bookInfo.setSubtitle(bookIsbnPojo.getSubtitle());
+        bookInfo.setAuthor(bookIsbnPojo.getAuthor());
+        bookInfo.setBinding(bookIsbnPojo.getBinding());
+        bookInfo.setIsbn(bookIsbnPojo.getIsbn13());
+        bookInfo.setIsbn10(bookIsbnPojo.getIsbn10());
+        bookInfo.setPic(bookIsbnPojo.getImages_medium());
+        bookInfo.setPrice((long)bookIsbnPojo.getPrice());
+        bookInfo.setPublisher(bookIsbnPojo.getPublisher());
+        bookInfo.setSummary(bookIsbnPojo.getSummary());
+        return addBookWithBookInfo(bookInfo);
+    }
+
+    /**
+     * 通过书名查重
+     * @param title 书名
+     * @return boolean true 存在重复 false 不存在重复
+     */
+    private boolean checkRepeat(String title){
+        BookInfoExample bookInfoExample = new BookInfoExample();
+        BookInfoExample.Criteria criteria = bookInfoExample.createCriteria();
+        criteria.andTitleEqualTo(title);
+        return bookInfoMapper.selectByExample(bookInfoExample).size() > 0;
     }
 
     @Override
