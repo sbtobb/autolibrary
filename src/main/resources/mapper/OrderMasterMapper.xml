@@ -133,7 +133,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.OrderMaster">
+  <insert id="insert" keyProperty="order_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.OrderMaster">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
@@ -144,7 +144,7 @@
       #{total_price,jdbcType=DECIMAL}, #{status,jdbcType=TINYINT}, #{create_time,jdbcType=TIMESTAMP}, 
       #{modified_time,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.OrderMaster">
+  <insert id="insertSelective" keyProperty="order_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.OrderMaster">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->

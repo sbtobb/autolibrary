@@ -122,6 +122,12 @@ public class DeviceServiceImpl implements DeviceService {
     private StatusMessagePojo changeDeviceStatus(int deviceId,byte status){
         DeviceMaster deviceMaster = deviceMasterMapper.selectByPrimaryKey(deviceId);
         deviceMaster.setStatus(status);
+        deviceMasterMapper.updateByPrimaryKeySelective(deviceMaster);
         return new StatusMessagePojo(200,"修改成功");
+    }
+
+    @Override
+    public BookInfo getBookInfo(int bookInfoId) {
+        return bookInfoMapper.selectByPrimaryKey(bookInfoId);
     }
 }
