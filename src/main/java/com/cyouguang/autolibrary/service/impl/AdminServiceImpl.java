@@ -282,7 +282,7 @@ public class AdminServiceImpl implements AdminService {
         criteria.andCreate_timeBetween(beginDate,endDate);
         List<OrderMaster> orderMasterList = orderMasterMapper.selectByExample(orderMasterExample);
 
-        SimpleDateFormat dt = new SimpleDateFormat("yyyyy-mm-dd");
+        SimpleDateFormat dt = new SimpleDateFormat("yyyyy-MM-dd");
         if (orderMasterList.size() <= 0){
             return xyPojoList;
         }
@@ -342,7 +342,7 @@ public class AdminServiceImpl implements AdminService {
         criteria.andLog_timeBetween(beginDate,endDate);
         List<UserLoginLog> userLoginLogList = userLoginLogMapper.selectByExample(userLoginLogExample);
 
-        SimpleDateFormat dt = new SimpleDateFormat("yyyyy-mm-dd");
+        SimpleDateFormat dt = new SimpleDateFormat("yyyyy-MM-dd");
         if (userLoginLogList.size() <= 0){
             return xyPojoList;
         }

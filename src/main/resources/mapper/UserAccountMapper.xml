@@ -131,7 +131,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.UserAccount">
+  <insert id="insert" keyProperty="user_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.UserAccount">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
@@ -140,7 +140,7 @@
     values (#{user_id,jdbcType=INTEGER}, #{login_name,jdbcType=VARCHAR}, #{password,jdbcType=CHAR}, 
       #{user_stats,jdbcType=TINYINT}, #{modified_time,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.UserAccount">
+  <insert id="insertSelective" keyProperty="user_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.UserAccount">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->

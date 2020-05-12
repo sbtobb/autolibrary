@@ -1,5 +1,6 @@
 package com.cyouguang.autolibrary.service;
 
+import com.cyouguang.autolibrary.entity.BookInfo;
 import com.cyouguang.autolibrary.entity.BookTag;
 import com.cyouguang.autolibrary.entity.OrderMaster;
 import com.cyouguang.autolibrary.pojo.StatusMessagePojo;
@@ -45,6 +46,13 @@ public interface DeviceService {
      * @return BookTag
      */
     BookTag getBookTag(String tag);
+
+    /**
+     * 取出图书信息
+     * @param bookInfoId 图书信息id
+     * @return 图书信息
+     */
+    BookInfo getBookInfo(int bookInfoId);
 
     /**
      * 设备上线

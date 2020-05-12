@@ -133,7 +133,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
+  <insert id="insert" keyProperty="product_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->
@@ -144,7 +144,7 @@
       #{tag,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
+  <insert id="insertSelective" keyProperty="product_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.OrderProduct">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 21:37:01 CST 2018. by MyBatis Generator, do not modify.
     -->

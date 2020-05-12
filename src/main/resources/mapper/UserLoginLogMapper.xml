@@ -130,7 +130,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.UserLoginLog">
+  <insert id="insert" keyProperty="log_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.UserLoginLog">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
@@ -139,7 +139,7 @@
     values (#{log_id,jdbcType=INTEGER}, #{user_id,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}, 
       #{log_time,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.UserLoginLog">
+  <insert id="insertSelective" keyProperty="log_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.UserLoginLog">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->

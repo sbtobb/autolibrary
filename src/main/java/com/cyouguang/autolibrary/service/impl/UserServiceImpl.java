@@ -85,6 +85,9 @@ public class UserServiceImpl implements UserService {
         if (userAccountMapper.insertSelective(userAccount) == 0){
             return new StatusMessagePojo(500,"服务器错误，创建用户账号失败");
         }
+        if (userAccount.getUser_id() == null){
+            return new StatusMessagePojo(500,"服务器错误，创建用户账号失败");
+        }
 
         //插入 user_info 记录
         UserInfo userInfo = new UserInfo();
@@ -170,7 +173,7 @@ public class UserServiceImpl implements UserService {
             // 更新 BookTag
             BookTag bookTag = new BookTag();
             bookTag.setTag(orderProduct.getTag());
-            bookTag.setStatus((byte)0);
+            bookTag.setStatus((byte)1);
 
             BookTagExample bookTagExample = new BookTagExample();
             BookTagExample.Criteria bookTagExampleCriteria = bookTagExample.createCriteria();

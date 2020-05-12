@@ -135,7 +135,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.cyouguang.autolibrary.entity.UserInfo">
+  <insert id="insert" keyProperty="user_info_id" useGeneratedKeys="true" parameterType="com.cyouguang.autolibrary.entity.UserInfo">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
@@ -148,7 +148,7 @@
       #{integral,jdbcType=DECIMAL}, #{register_time,jdbcType=TIMESTAMP}, #{modified_time,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.cyouguang.autolibrary.entity.UserInfo">
+  <insert id="insertSelective" keyProperty="user_info_id" useGeneratedKeys="true"  parameterType="com.cyouguang.autolibrary.entity.UserInfo">
     <!--
       WARNING - @mbg.generated  This element was generated on Tue Sep 18 08:11:50 CST 2018. by MyBatis Generator, do not modify.
     -->
